@@ -1,0 +1,8 @@
+{
+  "_说明": "Copy this file to tags.json. Keys are a skill's invoke name or plain name, values are tag lists. Optional _英文 maps each tag to the English name shown in English mode.",
+  "meeting-notes": ["笔记"],
+  "anthropic-skills:pdf": ["文档"],
+  "anthropic-skills:docx": ["文档"],
+  "figma:design-to-code": ["设计"],
+  "_英文": {"笔记": "Notes", "文档": "Docs", "设计": "Design"}
+}

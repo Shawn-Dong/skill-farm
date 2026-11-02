@@ -1,0 +1,282 @@
+[
+  {
+    "id": "01-hydrangea",
+    "name": "绣球",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/01-hydrangea.png"
+  },
+  {
+    "id": "02-cherry-blossom",
+    "name": "樱花",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/02-cherry-blossom.png"
+  },
+  {
+    "id": "03-sunflower",
+    "name": "向日葵",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/03-sunflower.png"
+  },
+  {
+    "id": "04-lavender",
+    "name": "薰衣草",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/04-lavender.png"
+  },
+  {
+    "id": "05-pothos",
+    "name": "绿萝",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m04-heart-leaf.png",
+    "mature": "plants/05-pothos.png"
+  },
+  {
+    "id": "06-jade",
+    "name": "玉树",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m06-jade.png",
+    "mature": "plants/06-jade.png"
+  },
+  {
+    "id": "07-morning-glory",
+    "name": "牵牛花",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m04-heart-leaf.png",
+    "mature": "plants/07-morning-glory.png"
+  },
+  {
+    "id": "08-maple",
+    "name": "红枫",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/08-maple.png"
+  },
+  {
+    "id": "09-daisy",
+    "name": "雏菊",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/09-daisy.png"
+  },
+  {
+    "id": "10-echeveria",
+    "name": "多肉",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m05-rosette.png",
+    "mature": "plants/10-echeveria.png"
+  },
+  {
+    "id": "11-tulip",
+    "name": "郁金香",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/11-tulip.png"
+  },
+  {
+    "id": "12-rose",
+    "name": "玫瑰",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/12-rose.png"
+  },
+  {
+    "id": "13-lily-of-valley",
+    "name": "铃兰",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/13-lily-of-valley.png"
+  },
+  {
+    "id": "14-poppy",
+    "name": "虞美人",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m07-fine-leaf.png",
+    "mature": "plants/14-poppy.png"
+  },
+  {
+    "id": "15-calla-lily",
+    "name": "马蹄莲",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/15-calla-lily.png"
+  },
+  {
+    "id": "16-anemone",
+    "name": "银莲花",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/16-anemone.png"
+  },
+  {
+    "id": "17-marigold",
+    "name": "万寿菊",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m07-fine-leaf.png",
+    "mature": "plants/17-marigold.png"
+  },
+  {
+    "id": "18-cyclamen",
+    "name": "仙客来",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m04-heart-leaf.png",
+    "mature": "plants/18-cyclamen.png"
+  },
+  {
+    "id": "19-hibiscus",
+    "name": "扶桑花",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/19-hibiscus.png"
+  },
+  {
+    "id": "20-hyacinth",
+    "name": "风信子",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/20-hyacinth.png"
+  },
+  {
+    "id": "21-peony",
+    "name": "牡丹",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/21-peony.png"
+  },
+  {
+    "id": "22-geranium",
+    "name": "天竺葵",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/22-geranium.png"
+  },
+  {
+    "id": "23-pansy",
+    "name": "三色堇",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/23-pansy.png"
+  },
+  {
+    "id": "24-daffodil",
+    "name": "水仙",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/24-daffodil.png"
+  },
+  {
+    "id": "25-crocus",
+    "name": "番红花",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/25-crocus.png"
+  },
+  {
+    "id": "26-zinnia",
+    "name": "百日菊",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/26-zinnia.png"
+  },
+  {
+    "id": "27-cosmos",
+    "name": "波斯菊",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m07-fine-leaf.png",
+    "mature": "plants/27-cosmos.png"
+  },
+  {
+    "id": "28-balloon-flower",
+    "name": "桔梗",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/28-balloon-flower.png"
+  },
+  {
+    "id": "29-dahlia",
+    "name": "大丽花",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/29-dahlia.png"
+  },
+  {
+    "id": "30-impatiens",
+    "name": "凤仙花",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/30-impatiens.png"
+  },
+  {
+    "id": "31-monstera",
+    "name": "龟背竹",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m04-heart-leaf.png",
+    "mature": "plants/31-monstera.png"
+  },
+  {
+    "id": "32-rubber-plant",
+    "name": "橡皮树",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/32-rubber-plant.png"
+  },
+  {
+    "id": "33-ficus",
+    "name": "小榕树",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m03-woody-sapling.png",
+    "mature": "plants/33-ficus.png"
+  },
+  {
+    "id": "34-snake-plant",
+    "name": "虎尾兰",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m02-narrow-leaf.png",
+    "mature": "plants/34-snake-plant.png"
+  },
+  {
+    "id": "35-aloe",
+    "name": "芦荟",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m05-rosette.png",
+    "mature": "plants/35-aloe.png"
+  },
+  {
+    "id": "36-barrel-cactus",
+    "name": "金琥仙人球",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m08-cactus.png",
+    "mature": "plants/36-barrel-cactus.png"
+  },
+  {
+    "id": "37-sedum",
+    "name": "虹之玉",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m06-jade.png",
+    "mature": "plants/37-sedum.png"
+  },
+  {
+    "id": "38-aeonium",
+    "name": "黑法师",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m05-rosette.png",
+    "mature": "plants/38-aeonium.png"
+  },
+  {
+    "id": "39-oxalis",
+    "name": "紫叶酢浆草",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m04-heart-leaf.png",
+    "mature": "plants/39-oxalis.png"
+  },
+  {
+    "id": "40-basil",
+    "name": "罗勒",
+    "initial": "growth/s00-seeded-soil.png",
+    "intermediate": "growth/m01-broadleaf-herb.png",
+    "mature": "plants/40-basil.png"
+  }
+]

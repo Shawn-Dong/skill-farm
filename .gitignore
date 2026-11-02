@@ -1,0 +1,6 @@
+# your own data: generated from your transcripts, keep it local
+skill-board.html
+farm.json
+tags.json
+__pycache__/
+.DS_Store
