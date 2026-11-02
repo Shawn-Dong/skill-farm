@@ -24,16 +24,16 @@
 }
 @media (prefers-color-scheme:dark){
 :root:not([data-theme="peach"]):not([data-theme="blue"]){
-  --bg:#171c18; --card:#232a24; --sunk:#1d231e; --ink:#eef3ec; --mut:#9fb0a2; --line:#33403a;
-    --accent:#9cc97a; --petal:#f0997b; --petal-c:#fac775;
-    --leaf:#8fc062; --stem:#7cad52; --soil:#3a4a3c; --seed:#b98a6a;
-    --u:#e0a493; --u-bg:#3d2f2b; --u-ink:#f5c4b3;
-    --p:#d9ad55; --p-bg:#3a3423; --p-ink:#fac775;
-    --g:#8ab364; --g-bg:#2a3a26; --g-ink:#c0dd97;
-    --a:#d77b5f; --a-bg:#3f2a24; --a-ink:#f0a98f;
-    --b:#8a86cf; --b-bg:#2c2b45; --b-ink:#c8c0ec;
-    --c:#7fb2d6; --c-bg:#233340; --c-ink:#b5d6ee;
-    --win-off:#2f3a31; --win-on:#ffd25e; --house:#232a24; --roof:#d77b5f; --door:#7a5a48; --house-sh:rgba(0,0,0,.45);
+  --bg:#1a1e24; --card:#252a32; --sunk:#1f242b; --ink:#eef1f5; --mut:#a3acb9; --line:#353c47;
+    --accent:#8fb4e0; --petal:#f0997b; --petal-c:#fac775;
+    --leaf:#8fc062; --stem:#7cad52; --soil:#3a404a; --seed:#b98a6a;
+    --u:#e0a493; --u-bg:#3a2f30; --u-ink:#f5c4b3;
+    --p:#d9ad55; --p-bg:#38332a; --p-ink:#fac775;
+    --g:#8ab364; --g-bg:#2a3530; --g-ink:#c0dd97;
+    --a:#d77b5f; --a-bg:#3d2c2c; --a-ink:#f0a98f;
+    --b:#8a86cf; --b-bg:#2d2f48; --b-ink:#c8c0ec;
+    --c:#7fb2d6; --c-bg:#23313f; --c-ink:#b5d6ee;
+    --win-off:#2c323b; --win-on:#ffd25e; --house:#252a32; --roof:#d77b5f; --door:#6a5a58; --house-sh:rgba(0,0,0,.45);
     --shadow:0 10px 28px rgba(0,0,0,.35);
 }
 }
@@ -50,17 +50,17 @@
     --win-off:#c0d2e4; --win-on:#ffd86b; --house:#ffffff; --roof:#7fa8dc; --door:#a9c4e6; --house-sh:rgba(70,110,160,.22);
     --shadow:0 10px 28px rgba(70,110,160,.14);
 }
-:root[data-theme="night"]{
-  --bg:#171c18; --card:#232a24; --sunk:#1d231e; --ink:#eef3ec; --mut:#9fb0a2; --line:#33403a;
-    --accent:#9cc97a; --petal:#f0997b; --petal-c:#fac775;
-    --leaf:#8fc062; --stem:#7cad52; --soil:#3a4a3c; --seed:#b98a6a;
-    --u:#e0a493; --u-bg:#3d2f2b; --u-ink:#f5c4b3;
-    --p:#d9ad55; --p-bg:#3a3423; --p-ink:#fac775;
-    --g:#8ab364; --g-bg:#2a3a26; --g-ink:#c0dd97;
-    --a:#d77b5f; --a-bg:#3f2a24; --a-ink:#f0a98f;
-    --b:#8a86cf; --b-bg:#2c2b45; --b-ink:#c8c0ec;
-    --c:#7fb2d6; --c-bg:#233340; --c-ink:#b5d6ee;
-    --win-off:#2f3a31; --win-on:#ffd25e; --house:#232a24; --roof:#d77b5f; --door:#7a5a48; --house-sh:rgba(0,0,0,.45);
+:root[data-theme="slate"]{
+  --bg:#1a1e24; --card:#252a32; --sunk:#1f242b; --ink:#eef1f5; --mut:#a3acb9; --line:#353c47;
+    --accent:#8fb4e0; --petal:#f0997b; --petal-c:#fac775;
+    --leaf:#8fc062; --stem:#7cad52; --soil:#3a404a; --seed:#b98a6a;
+    --u:#e0a493; --u-bg:#3a2f30; --u-ink:#f5c4b3;
+    --p:#d9ad55; --p-bg:#38332a; --p-ink:#fac775;
+    --g:#8ab364; --g-bg:#2a3530; --g-ink:#c0dd97;
+    --a:#d77b5f; --a-bg:#3d2c2c; --a-ink:#f0a98f;
+    --b:#8a86cf; --b-bg:#2d2f48; --b-ink:#c8c0ec;
+    --c:#7fb2d6; --c-bg:#23313f; --c-ink:#b5d6ee;
+    --win-off:#2c323b; --win-on:#ffd25e; --house:#252a32; --roof:#d77b5f; --door:#6a5a58; --house-sh:rgba(0,0,0,.45);
     --shadow:0 10px 28px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
@@ -117,8 +117,8 @@ select.sort{border:0;background:var(--card);color:var(--ink);border-radius:12px;
 .tag.s-codex{background:var(--c-bg);color:var(--c-ink)}
 
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 26px}
-@media (max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px}}
+@media (max-width:1320px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px}}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
 .card{--src:var(--u);background:var(--card);border-radius:var(--radius);padding:20px 22px 18px;box-shadow:0 1px 0 var(--line),var(--shadow);cursor:pointer;display:flex;flex-direction:column;gap:6px;border:2px solid transparent;text-align:left;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s;animation:pop .45s backwards}
 .card.s-project{--src:var(--p)} .card.s-plugin{--src:var(--g)} .card.s-anthropic{--src:var(--a)} .card.s-builtin{--src:var(--b)} .card.s-codex{--src:var(--c)}
@@ -324,7 +324,7 @@ const I18N = {
   zh: {
     title:"Skill 农场", sub:"你电脑上所有的 Claude skill 都种在这里，用得越多长得越好",
     poke:"戳一下温室", houseAria:"农场的小温室",
-    themeAria:"切换配色", themes:{peach:"蜜桃", blue:"天蓝", night:"夜晚温室"}, langBtn:"EN", langAria:"Switch to English",
+    themeAria:"切换配色", themes:{peach:"蜜桃", blue:"天蓝", slate:"雾灰蓝"}, langBtn:"EN", langAria:"Switch to English",
     search:"搜名字或描述…", searchAria:"搜索 skill", viewAria:"显示方式", cards:"卡片", farm:"农场", mini:"极简",
     projAria:"按项目筛选", sortAria:"排序", allProjects:"全部项目",
     sort:{uses:"最常用", recent:"最近用过", name:"按名字", modified:"最近修改"},
@@ -402,7 +402,7 @@ const I18N = {
   en: {
     title:"Skill Farm", sub:"Every Claude skill on this computer is planted here. The more you use one, the more it grows.",
     poke:"Poke the greenhouse", houseAria:"The farm greenhouse",
-    themeAria:"Switch colors", themes:{peach:"Peach", blue:"Baby blue", night:"Night"}, langBtn:"中文", langAria:"切换到中文",
+    themeAria:"Switch colors", themes:{peach:"Peach", blue:"Baby blue", slate:"Slate"}, langBtn:"中文", langAria:"切换到中文",
     search:"Search names or descriptions…", searchAria:"Search skills", viewAria:"View", cards:"Cards", farm:"Farm", mini:"Minimal",
     projAria:"Filter by project", sortAria:"Sort", allProjects:"All projects",
     sort:{uses:"Most used", recent:"Recently used", name:"Name", modified:"Recently edited"},
@@ -816,16 +816,16 @@ function extras(){
 const root = document.documentElement;
 const SUN = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>`;
 const MOON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>`;
-const THEMES = ["peach", "blue", "night"];
-const curTheme = () => root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "night" : "peach");
-function themeLabel(){ const c = curTheme(); $("#theme").innerHTML = `${c === "night" ? MOON : SUN}${t.themes[c]}`; }
+const THEMES = ["peach", "blue", "slate"];
+const curTheme = () => root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "slate" : "peach");
+function themeLabel(){ const c = curTheme(); $("#theme").innerHTML = `${c === "slate" ? MOON : SUN}${t.themes[c]}`; }
 $("#theme").onclick = () => {
   root.dataset.theme = THEMES[(THEMES.indexOf(curTheme()) + 1) % THEMES.length]; themeLabel();
   try { localStorage.setItem("sb-theme", root.dataset.theme); } catch(e){}
 };
-const OLD_THEME = {light: "peach", dark: "blue"};
+const OLD_THEME = {light: "peach", dark: "blue", night: "slate"};
 try { const t = localStorage.getItem("sb-theme"); if (t) root.dataset.theme = OLD_THEME[t] || t; } catch(e){}
-if (QS.get("theme")) root.dataset.theme = {dark: "night", ...OLD_THEME}[QS.get("theme")] || QS.get("theme");
+if (QS.get("theme")) root.dataset.theme = {...OLD_THEME, dark: "slate"}[QS.get("theme")] || QS.get("theme");
 if (!THEMES.includes(root.dataset.theme)) delete root.dataset.theme;
 
 function statics(){

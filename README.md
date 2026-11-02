@@ -10,7 +10,7 @@ Everything runs locally. One Python script reads your skill folders and your loc
 
 ![Farm view](docs/farm-en.png)
 
-![Night greenhouse palette in Chinese](docs/cards-zh-night.png)
+![Slate palette in Chinese](docs/cards-zh-slate.png)
 
 ## Why
 
@@ -33,7 +33,7 @@ Skill Farm answers four questions from your real usage:
 - **Update hints.** Plugins with a newer version in their marketplace, and git-based skills that are behind their remote.
 - **Filters.** By source, by the project a skill was used in, and by your own tags.
 - **Recent activity.** A timeline of the last skill calls and where they happened.
-- **Three views, three palettes, two languages.** Cards, farm or minimal; peach, baby blue or night greenhouse; Chinese or English, with Chinese display names for skills.
+- **Three views, three palettes, two languages.** Cards, farm or minimal; peach, baby blue or slate; Chinese or English, with Chinese display names for skills.
 
 ## Quick start
 
@@ -63,7 +63,7 @@ python3 build.py --demo --open
 | `--demo` | Build `demo.html` from made-up data instead of yours |
 | `--data-dir PATH` | Keep the page, `farm.json`, `tags.json` and thumbnails in another folder. The `SKILL_FARM_HOME` environment variable does the same |
 
-The page also reads `?lang=en` or `?lang=zh`, `?view=cards`, `?view=farm` or `?view=mini`, and `?theme=peach`, `?theme=blue` or `?theme=night` from the URL.
+The page also reads `?lang=en` or `?lang=zh`, `?view=cards`, `?view=farm` or `?view=mini`, and `?theme=peach`, `?theme=blue` or `?theme=slate` from the URL.
 
 ## Install as a Claude Code plugin
 
@@ -138,7 +138,7 @@ MIT
 
 ![中文与天蓝配色](docs/cards-zh-blue.png)
 
-![中文与夜晚温室配色](docs/cards-zh-night.png)
+![中文与雾灰蓝配色](docs/cards-zh-slate.png)
 
 **它回答四个问题**
 
@@ -153,7 +153,7 @@ MIT
 - 每张卡片是名字、中文名、一句话介绍和用了几次。
 - 体检：上下文占用、近 8 周趋势、常一起用的 skill、可能漏触发和可能误触发，附上你对话里的原话。
 - 单个删除：详情里给出具体命令，把你自己的 skill 移到废纸篓，或卸载它所在的插件，不会替你自动删。
-- 卡片、农场、极简三种视图，蜜桃、天蓝、夜晚温室三套配色，中英文切换。
+- 卡片、农场、极简三种视图，蜜桃、天蓝、雾灰蓝三套配色，中英文切换。
 
 **开始用**
 
