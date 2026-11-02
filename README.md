@@ -4,7 +4,7 @@ See every Claude Code skill on your computer as a potted plant. Skills you use g
 
 Everything runs locally. One Python script reads your skill folders and your local Claude Code transcripts, then writes a single HTML page. Nothing is uploaded anywhere.
 
-[中文说明](#中文说明)
+**[Live demo](https://shawn-dong.github.io/skill-farm/demo.html)** (made-up data) · [中文说明](#中文说明)
 
 ![Card view](docs/cards-en.png)
 
@@ -107,6 +107,8 @@ MIT
 把电脑上所有的 Claude Code skill 种成一盆盆植物。用得越多长得越好，从没用过的就是一盆刚播种的土，描述打架或者格式有问题的会标出来，并告诉你怎么改。
 
 全部在本机运行。一个 Python 脚本读取 skill 文件夹和本地的 Claude Code 对话记录，生成一个 HTML 页面，不上传任何东西。
+
+在线演示（示例数据）：https://shawn-dong.github.io/skill-farm/demo.html?lang=zh
 
 ![中文与天蓝配色](docs/cards-zh-blue.png)
 
