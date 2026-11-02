@@ -860,6 +860,24 @@ def blurbs(skills, personal=True):
     return [s for s in skills if not (s["blurb_zh"] and s["blurb_en"])]
 
 
+def untagged(skills):
+    """Skills with no tag yet, plus the tags already in use, so new tags can reuse the same words."""
+    try:
+        tags = json.loads(TAGS.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        tags = {}
+    vocab = defaultdict(int)
+    for k, v in tags.items():
+        if not k.startswith("_") and isinstance(v, list):
+            for x in v:
+                vocab[x] += 1
+    tagged = {k for k, v in tags.items() if not k.startswith("_") and v}
+    return {"tags_file": str(TAGS), "tag_vocab": dict(sorted(vocab.items(), key=lambda kv: -kv[1])),
+            "tag_en": tags.get("_英文", {}),
+            "untagged": [{"invoke": s["invoke"], "description": (s.get("description_en") or s["description"])[:200]}
+                         for s in skills if s["invoke"] not in tagged and s["name"] not in tagged]}
+
+
 def zh_names(skills, personal=True):
     """Chinese display names: names.json in the data folder wins over the built-in list."""
     own = {}
@@ -898,7 +916,8 @@ def main():
         print(json.dumps({"names_file": str(NAMES), "unnamed": [{"invoke": s["invoke"], "description": s["description"][:160]}
                                                               for s in zh_names(skills)],
                           "blurbs_file": str(BLURBS), "no_blurb": [{"invoke": s["invoke"], "description": s["description"][:300]}
-                                                                 for s in blurbs(skills)]}, ensure_ascii=False, indent=1))
+                                                                 for s in blurbs(skills)],
+                          **untagged(skills)}, ensure_ascii=False, indent=1))
         return
     zh_names(skills)
     blurbs(skills)

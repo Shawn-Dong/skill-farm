@@ -85,7 +85,7 @@ The plugin code lives in a cache folder that Claude Code replaces on every updat
 
 ## Make it yours
 
-- **Tags.** Copy `tags.example.json` to `tags.json` and list tags per skill. Add English names under `_英文` if you write tags in Chinese.
+- **Tags.** Copy `tags.example.json` to `tags.json` and list tags per skill. Add English names under `_英文` if you write tags in Chinese. With the plugin, `/skill-farm:farm` tags new skills for you, reusing the tags you already have and never changing ones you set.
 - **Chinese names.** `names.json` maps a skill's invoke name to the Chinese name shown in Chinese mode. Common built-in skills already have one; the plugin's `/skill-farm:farm` fills in new ones for you. `python3 build.py --unnamed` lists the skills still missing a name. `blurbs.json` holds the one-line intro shown on each card, in Chinese and English; skills without one show the first sentence of their description.
 - **Plants.** `farm.json` remembers which plant each skill got. Change any entry to another file in `assets/plants`, or delete a line to have it reassigned. `growth` sets how many uses it takes to become a seedling and a mature plant.
 - **More art.** Drop new transparent PNGs into `assets/plants`, add their sapling stage to `assets/growth-map.json`, and rebuild. Existing assignments stay put; new plants go to new skills first.
@@ -191,7 +191,7 @@ Claude Code 2.1.275 及以上可以一行装好：`/plugin install skill-farm --
 
 **自定义**
 
-- 标签：把 `tags.example.json` 复制成 `tags.json`，按 skill 写标签。
+- 标签：把 `tags.example.json` 复制成 `tags.json`，按 skill 写标签。用插件的话，`/skill-farm:farm` 会自动给新 skill 打标签，优先沿用你已有的标签，不会改动你手动打的。
 - 中文名和一句话介绍：`names.json` 是中文名对照表，`blurbs.json` 是卡片上的中英文一句话介绍。常见的内置 skill 已经自带，插件的 `/skill-farm:farm` 会自动给新 skill 补上。
 - 盆栽：`farm.json` 记着每个 skill 种的是哪盆，可以手动改；`growth` 设置长成幼苗和成熟各需要用几次。
 - 新素材：把透明背景的 PNG 放进 `assets/plants`，在 `assets/growth-map.json` 里写上对应的幼苗图，重新运行即可。
