@@ -1,0 +1,15 @@
+{
+  "name": "skill-farm",
+  "description": "Skill Farm, a local page that shows every Claude Code skill as a plant",
+  "owner": {
+    "name": "Shawn Dong",
+    "url": "https://github.com/Shawn-Dong"
+  },
+  "plugins": [
+    {
+      "name": "skill-farm",
+      "source": "./",
+      "description": "See every Claude Code skill on your computer as a potted plant that grows with real usage"
+    }
+  ]
+}

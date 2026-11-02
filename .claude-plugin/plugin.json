@@ -1,0 +1,14 @@
+{
+  "name": "skill-farm",
+  "displayName": "Skill Farm",
+  "version": "0.2.0",
+  "description": "See every Claude Code skill on your computer as a potted plant that grows with real usage. Adds /skill-farm:farm and refreshes the page when a session ends.",
+  "author": {
+    "name": "Shawn Dong",
+    "url": "https://github.com/Shawn-Dong"
+  },
+  "homepage": "https://github.com/Shawn-Dong/skill-farm",
+  "repository": "https://github.com/Shawn-Dong/skill-farm",
+  "license": "MIT",
+  "keywords": ["skills", "usage", "dashboard", "local"]
+}

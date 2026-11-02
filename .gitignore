@@ -2,5 +2,8 @@
 skill-board.html
 farm.json
 tags.json
+names.json
+blurbs.json
 __pycache__/
 .DS_Store
+*.tmp

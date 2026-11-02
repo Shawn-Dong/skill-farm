@@ -23,21 +23,21 @@
   --kai:"Fraunces","LXGW WenKai","Kaiti SC","STKaiti","PingFang SC",serif;
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#dcecfa; --card:#f7fbff; --sunk:#e9f3fc; --ink:#2b3d57; --mut:#6a82a0; --line:#c7dcf0;
-    --accent:#6f9fd8; --petal:#f3a9c4; --petal-c:#f7d77a;
-    --leaf:#8fd0b0; --stem:#6db893; --soil:#c3d6e8; --seed:#a8928a;
-    --u:#f6c6d9; --u-bg:#fbe1eb; --u-ink:#a3426c;
-    --p:#f2d98a; --p-bg:#fbf1c9; --p-ink:#7d6110;
-    --g:#a9dcc4; --g-bg:#d9f2e6; --g-ink:#2e7155;
-    --a:#a9b8ee; --a-bg:#dfe5fb; --a-ink:#3d53a6;
-    --b:#9fd3df; --b-bg:#d5eef4; --b-ink:#1f6b79;
-    --c:#f4c3a8; --c-bg:#fde5d8; --c-ink:#9a4a2e;
-    --win-off:#c0d2e4; --win-on:#ffd86b; --house:#ffffff; --roof:#7fa8dc; --door:#a9c4e6; --house-sh:rgba(70,110,160,.22);
-    --shadow:0 10px 28px rgba(70,110,160,.14);
-  }
+:root:not([data-theme="peach"]):not([data-theme="blue"]){
+  --bg:#171c18; --card:#232a24; --sunk:#1d231e; --ink:#eef3ec; --mut:#9fb0a2; --line:#33403a;
+    --accent:#9cc97a; --petal:#f0997b; --petal-c:#fac775;
+    --leaf:#8fc062; --stem:#7cad52; --soil:#3a4a3c; --seed:#b98a6a;
+    --u:#e0a493; --u-bg:#3d2f2b; --u-ink:#f5c4b3;
+    --p:#d9ad55; --p-bg:#3a3423; --p-ink:#fac775;
+    --g:#8ab364; --g-bg:#2a3a26; --g-ink:#c0dd97;
+    --a:#d77b5f; --a-bg:#3f2a24; --a-ink:#f0a98f;
+    --b:#8a86cf; --b-bg:#2c2b45; --b-ink:#c8c0ec;
+    --c:#7fb2d6; --c-bg:#233340; --c-ink:#b5d6ee;
+    --win-off:#2f3a31; --win-on:#ffd25e; --house:#232a24; --roof:#d77b5f; --door:#7a5a48; --house-sh:rgba(0,0,0,.45);
+    --shadow:0 10px 28px rgba(0,0,0,.35);
 }
-:root[data-theme="dark"]{
+}
+:root[data-theme="blue"]{
   --bg:#dcecfa; --card:#f7fbff; --sunk:#e9f3fc; --ink:#2b3d57; --mut:#6a82a0; --line:#c7dcf0;
     --accent:#6f9fd8; --petal:#f3a9c4; --petal-c:#f7d77a;
     --leaf:#8fd0b0; --stem:#6db893; --soil:#c3d6e8; --seed:#a8928a;
@@ -49,6 +49,19 @@
     --c:#f4c3a8; --c-bg:#fde5d8; --c-ink:#9a4a2e;
     --win-off:#c0d2e4; --win-on:#ffd86b; --house:#ffffff; --roof:#7fa8dc; --door:#a9c4e6; --house-sh:rgba(70,110,160,.22);
     --shadow:0 10px 28px rgba(70,110,160,.14);
+}
+:root[data-theme="night"]{
+  --bg:#171c18; --card:#232a24; --sunk:#1d231e; --ink:#eef3ec; --mut:#9fb0a2; --line:#33403a;
+    --accent:#9cc97a; --petal:#f0997b; --petal-c:#fac775;
+    --leaf:#8fc062; --stem:#7cad52; --soil:#3a4a3c; --seed:#b98a6a;
+    --u:#e0a493; --u-bg:#3d2f2b; --u-ink:#f5c4b3;
+    --p:#d9ad55; --p-bg:#3a3423; --p-ink:#fac775;
+    --g:#8ab364; --g-bg:#2a3a26; --g-ink:#c0dd97;
+    --a:#d77b5f; --a-bg:#3f2a24; --a-ink:#f0a98f;
+    --b:#8a86cf; --b-bg:#2c2b45; --b-ink:#c8c0ec;
+    --c:#7fb2d6; --c-bg:#233340; --c-ink:#b5d6ee;
+    --win-off:#2f3a31; --win-on:#ffd25e; --house:#232a24; --roof:#d77b5f; --door:#7a5a48; --house-sh:rgba(0,0,0,.45);
+    --shadow:0 10px 28px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB",sans-serif;transition:background .3s}
@@ -73,10 +86,12 @@ header p{margin:8px 0 0;color:var(--mut);font-size:17px;max-width:560px}
 .theme{display:inline-flex;align-items:center;gap:6px;border:0;background:var(--card);color:var(--ink);border-radius:999px;padding:9px 16px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
 .theme svg{width:16px;height:16px}
 
-.stats{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 22px;margin:26px 0 24px;padding:14px 2px 0;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
-.stats b{font-family:var(--kai);font-size:24px;font-weight:500;color:var(--ink);margin-right:5px;font-variant-numeric:tabular-nums}
-.stats .fav b{font-size:17px}
-.stats .warn{border:0;background:none;padding:0;font:inherit;color:var(--a-ink);cursor:pointer;display:inline-flex;align-items:baseline;gap:5px}
+.stats{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 28px;margin:26px 0 24px;padding:14px 2px 0;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+.stats .sm,.stats .ss{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 26px}
+.stats .ss{gap:6px 20px}
+.stats b{font-family:var(--kai);font-size:26px;font-weight:500;color:var(--ink);margin-right:6px;font-variant-numeric:tabular-nums}
+.stats .ss b{font-size:20px}
+.stats .warn{border:0;background:none;padding:0;font:inherit;color:var(--a-ink);cursor:pointer;display:inline-flex;align-items:baseline}
 .stats .warn b{color:var(--a-ink)}
 .stats .warn:hover span{text-decoration:underline;text-underline-offset:3px}
 
@@ -101,12 +116,20 @@ select.sort{border:0;background:var(--card);color:var(--ink);border-radius:12px;
 .tag.s-builtin{background:var(--b-bg);color:var(--b-ink)}
 .tag.s-codex{background:var(--c-bg);color:var(--c-ink)}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px 18px}
-.card{--src:var(--u);background:var(--card);border-radius:var(--radius);padding:16px 18px 14px;box-shadow:0 6px 0 var(--src),var(--shadow);cursor:pointer;display:flex;flex-direction:column;gap:6px;border:2px solid transparent;text-align:left;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s;animation:pop .45s backwards}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 26px}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px}}
+@media (max-width:520px){.grid{grid-template-columns:1fr}}
+.card{--src:var(--u);background:var(--card);border-radius:var(--radius);padding:20px 22px 18px;box-shadow:0 1px 0 var(--line),var(--shadow);cursor:pointer;display:flex;flex-direction:column;gap:6px;border:2px solid transparent;text-align:left;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s;animation:pop .45s backwards}
 .card.s-project{--src:var(--p)} .card.s-plugin{--src:var(--g)} .card.s-anthropic{--src:var(--a)} .card.s-builtin{--src:var(--b)} .card.s-codex{--src:var(--c)}
-.card:hover{box-shadow:0 6px 0 var(--src),0 14px 32px var(--house-sh)}
-.pot{position:relative;height:128px;margin:-6px -6px 4px;display:grid;place-items:end center;border-radius:20px}
-.pot .plant{width:84px;height:84px;margin:0 0 10px}
+.card:hover{box-shadow:0 1px 0 var(--line),0 14px 32px var(--house-sh)}
+[data-view="mini"] .pot,[data-view="mini"] #hbtn,[data-view="mini"] .dh #dPlant{display:none}
+[data-view="mini"] .ttl{padding-top:0}
+.head{display:flex;align-items:flex-start;gap:12px;margin-bottom:2px}
+.ttl{flex:1;min-width:0;padding-top:6px;display:flex;flex-direction:column;gap:6px}
+.pot{position:relative;flex:none;width:66px;height:66px;margin:-6px -7px 0 0;display:grid;place-items:center}
+.pot .pimg{width:66px;height:66px;filter:drop-shadow(0 3px 4px var(--house-sh))}
+.pot .plant{width:56px;height:56px;margin:0}
 .pimg{width:124px;height:124px;object-fit:contain;filter:drop-shadow(0 7px 6px var(--house-sh))}
 .dh .pimg{width:76px;height:76px;margin:-6px 0 -4px}
 .viewsw{display:inline-flex;background:var(--sunk);border-radius:12px;padding:3px}
@@ -124,12 +147,13 @@ select.sort{border:0;background:var(--card);color:var(--ink);border-radius:12px;
 @keyframes pop{from{opacity:0}}
 .card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
 .plant{width:48px;height:48px;flex:none;margin:-4px -4px 0 0;transition:transform .3s;transform-origin:50% 90%}
-.card h3{margin:0;font-family:var(--kai);font-size:18px;font-weight:600;word-break:break-word}
-.card p{margin:0;color:var(--mut);font-size:13px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.orig{font-size:12px;color:var(--mut);margin-top:-2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card h3{margin:0;font-family:var(--kai);font-size:21px;line-height:1.25;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card p{margin:0 0 4px;color:var(--mut);font-size:13.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .use{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12.5px;margin-top:auto;padding-top:6px}
-.use b{font-weight:600} .use .when{color:var(--mut)}
+.use b{font-weight:600;color:var(--ink)} .use .when{color:var(--mut);white-space:nowrap}
+.use .src{font-size:12.5px;margin:0}
 .stage{color:var(--mut);font-weight:500}
-.card.sleep{box-shadow:0 6px 0 var(--line),var(--shadow)}
 .card.sleep h3,.card.sleep p{opacity:.62}
 .sleepy{color:var(--mut);font-style:italic}
 .tagbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:-8px 0 20px;font-size:12.5px;color:var(--mut)}
@@ -138,8 +162,8 @@ select.sort{border:0;background:var(--card);color:var(--ink);border-radius:12px;
 .src{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut);margin-bottom:-2px;min-width:0}
 .src i{width:8px;height:8px;border-radius:50%;background:var(--src);flex:none}
 .src span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.alert{position:absolute;right:2px;top:2px;width:26px;height:26px;border-radius:50%;background:var(--a-bg);color:var(--a-ink);display:grid;place-items:center;z-index:1}
-.alert svg{width:15px;height:15px}
+.alert{position:absolute;left:-6px;top:0;width:22px;height:22px;border-radius:50%;background:var(--a-bg);color:var(--a-ink);display:grid;place-items:center;z-index:1}
+.alert svg{width:13px;height:13px}
 .plot{position:relative}
 .plot .alert{right:10px;top:6px;width:22px;height:22px}
 .fix{margin:8px 0 2px;padding-left:18px;color:var(--ink);font-size:13px}
@@ -152,6 +176,16 @@ select.sort{border:0;background:var(--card);color:var(--ink);border-radius:12px;
 .note svg{width:13px;height:13px;flex:none}
 .note.warn{color:var(--a-ink)} .note.up{color:var(--g-ink)}
 .hint{color:var(--mut);font-size:12px}
+.grp{margin-top:34px}
+.grp:first-child{margin-top:4px}
+.gh{display:flex;align-items:center;gap:10px;margin:0 0 18px;font-family:var(--kai);font-size:19px;font-weight:600;color:var(--ink)}
+.gh i{width:9px;height:9px;border-radius:50%;background:var(--src);flex:none}
+.gh span{font-family:inherit;font-size:14px;font-weight:500;color:var(--mut)}
+.gh::after{content:"";flex:1;height:1px;background:var(--line);margin-left:6px}
+.del{margin:0 0 14px}
+.delbox{margin-top:10px;background:var(--a-bg);color:var(--ink);border-radius:16px;padding:12px 14px;font-size:13px}
+.delbox p{margin:0 0 8px}
+.delbox .cmd{background:var(--card);margin:0 0 10px;font-size:12px}
 .empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:40px}
 
 section.extra{margin-top:40px}
@@ -171,6 +205,34 @@ section.extra h2 svg{width:20px;height:20px;color:var(--accent)}
 .tl .nm:hover{color:var(--accent)} .tl span.nm{cursor:default}
 .tl .pj{color:var(--mut);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .more{margin-top:8px;border:2px solid var(--line);background:transparent;color:var(--mut);border-radius:999px;padding:4px 14px;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer}
+.card.wilt .pot .pimg{filter:saturate(.35) drop-shadow(0 4px 4px var(--house-sh))}
+.plot.wilt .pimg{filter:saturate(.35) drop-shadow(0 7px 6px var(--house-sh))}
+.dh.wilt .pimg{filter:saturate(.35) drop-shadow(0 7px 6px var(--house-sh))}
+.num{font-family:var(--kai);font-weight:600;font-variant-numeric:tabular-nums}
+.stats .go{border:0;background:none;padding:0;font:inherit;color:var(--mut);cursor:pointer;display:inline-flex;align-items:baseline}
+.stats .go:hover span{color:var(--ink)}
+.diag{background:var(--card);border-radius:22px;padding:14px 22px 16px;box-shadow:var(--shadow);max-width:760px;font-size:13.5px}
+.diag h3{font-family:var(--kai);font-size:16px;font-weight:600;margin:16px 0 4px}
+.diag h3:first-child{margin-top:2px}
+.diag p{margin:0 0 6px;color:var(--mut)}
+.rows{list-style:none;margin:4px 0 6px;padding:0}
+.rows li{display:flex;align-items:baseline;gap:8px;padding:3px 0;min-width:0}
+.rows li>i{width:8px;height:8px;border-radius:50%;background:var(--src,var(--line));flex:none;align-self:center}
+.rows .n{font-family:var(--kai);font-variant-numeric:tabular-nums;flex:none;color:var(--ink)}
+.rows .why{color:var(--mut);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.lnk{border:0;background:none;padding:0;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;transition:color .2s}
+.lnk:hover{color:var(--accent)}
+.inl{display:flex;flex-wrap:wrap;gap:2px 0;align-items:baseline;margin:0 0 4px}
+.inl .sep{color:var(--mut);white-space:pre}
+.inl .lab{color:var(--mut);margin-right:8px}
+.qs{margin:0 0 14px}
+.qs h4{margin:0 0 2px;font-family:var(--kai);font-size:15px;font-weight:600;display:flex;align-items:center;gap:7px}
+.qs h4 i{width:8px;height:8px;border-radius:50%;background:var(--q);flex:none}
+.qs p{margin:0 0 6px;color:var(--mut);font-size:12.5px}
+.qs ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.qs li{background:var(--sunk);border-radius:14px;padding:7px 12px;font-size:13px;word-break:break-word}
+.qs li small{display:block;color:var(--mut);font-size:11.5px}
+.spark{display:inline-block;vertical-align:middle;margin-right:8px;overflow:visible}
 .ghosts{display:flex;flex-wrap:wrap;gap:8px}
 .ghost{border:2px solid var(--line);color:var(--mut);border-radius:999px;padding:4px 13px;font-size:13px}
 .ghost b{color:var(--ink);font-weight:700}
@@ -203,7 +265,7 @@ footer{color:var(--mut);font-size:12px;margin-top:44px;text-align:center}
     <p id="sub"></p>
     <div class="legend" id="legend"></div>
   </div>
-  <div class="acts"><div class="viewsw" role="group" data-ia="viewAria"><button type="button" data-v="cards" data-i="cards"></button><button type="button" data-v="farm" data-i="farm"></button></div><button class="theme" id="lang" type="button"></button><button class="theme" id="theme" type="button" data-ia="themeAria"></button></div>
+  <div class="acts"><div class="viewsw" role="group" data-ia="viewAria"><button type="button" data-v="cards" data-i="cards"></button><button type="button" data-v="farm" data-i="farm"></button><button type="button" data-v="mini" data-i="mini"></button></div><button class="theme" id="lang" type="button"></button><button class="theme" id="theme" type="button" data-ia="themeAria"></button></div>
 </header>
 
 <div class="stats" id="stats"></div>
@@ -235,6 +297,11 @@ footer{color:var(--mut);font-size:12px;margin-top:44px;text-align:center}
   <div class="wlist" id="warns"></div>
 </section>
 
+<section class="extra" id="ctxSec">
+  <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span data-i="ctxH"></span></h2>
+  <div class="diag" id="ctx"></div>
+</section>
+
 <section class="extra" id="ghostSec">
   <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i="ghostH"></span></h2>
   <p style="color:var(--mut);font-size:13px;margin:-4px 0 10px" data-i="ghostP"></p>
@@ -250,15 +317,15 @@ footer{color:var(--mut);font-size:12px;margin-top:44px;text-align:center}
 </dialog>
 
 <script>
-const DATA = {"generated": "2026-11-02T00:28", "skills": [{"id": "user:meeting-notes", "name": "meeting-notes", "invoke": "meeting-notes", "source": "user", "scope": {"k": "all"}, "description": "Turn a meeting transcript into short notes with decisions, owners and next steps. Use when the user pastes a transcript or asks for minutes.", "path": "~/demo/meeting-notes/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-20T05:28", "lines": 68, "files": 4, "body": "---\nname: meeting-notes\ndescription: Turn a meeting transcript into short notes with decisions, owners and next steps. Use when the user pastes a transcript or asks for minutes.\n---\n\n# meeting-notes\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 23, "last_used": "2026-11-02T05:28:04.000Z", "used_in": ["~/projects/blog"], "tags": ["Notes"], "plant": {"src": "assets/thumbs/plants-17-marigold.png", "mid": "assets/thumbs/growth-m07-fine-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "万寿菊", "name_en": "Marigold"}}, {"id": "user:code-tutor", "name": "code-tutor", "invoke": "code-tutor", "source": "user", "scope": {"k": "all"}, "description": "Explain a piece of code step by step for a beginner, with a small example for every new idea. Use when the user asks what some code does.", "path": "~/demo/code-tutor/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-06T05:28", "lines": 137, "files": 1, "body": "---\nname: code-tutor\ndescription: Explain a piece of code step by step for a beginner, with a small example for every new idea. Use when the user asks what some code does.\n---\n\n# code-tutor\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 12, "last_used": "2026-10-30T05:28:04.000Z", "used_in": ["~/projects/cli-tool"], "tags": ["Learning"], "plant": {"src": "assets/thumbs/plants-19-hibiscus.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "扶桑花", "name_en": "Hibiscus"}}, {"id": "user:tiny", "name": "tiny", "invoke": "tiny", "source": "user", "scope": {"k": "all"}, "description": "Make text shorter.", "path": "~/demo/tiny/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-25T05:28", "lines": 86, "files": 1, "body": "---\nname: tiny\ndescription: Make text shorter.\n---\n\n# tiny\n\nDemo skill used for screenshots.\n", "problems": ["short_desc"], "uses": 0, "last_used": null, "used_in": [], "tags": [], "plant": {"src": "assets/thumbs/plants-22-geranium.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "天竺葵", "name_en": "Geranium"}}, {"id": "project:release-checklist", "name": "release-checklist", "invoke": "release-checklist", "source": "project", "scope": {"k": "project", "path": "~/projects/shop-app"}, "description": "Walk through the release checklist for this repo: changelog, version bump, tag, and smoke test. Use before cutting a release.", "path": "~/demo/release-checklist/SKILL.md", "dir": "", "linked": null, "modified": "2026-08-21T05:28", "lines": 64, "files": 3, "body": "---\nname: release-checklist\ndescription: Walk through the release checklist for this repo: changelog, version bump, tag, and smoke test. Use before cutting a release.\n---\n\n# release-checklist\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 7, "last_used": "2026-10-03T05:28:04.000Z", "used_in": ["~/projects/blog"], "tags": ["Shipping"], "plant": {"src": "assets/thumbs/plants-39-oxalis.png", "mid": "assets/thumbs/growth-m04-heart-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "紫叶酢浆草", "name_en": "Oxalis"}}, {"id": "project:api-docs", "name": "api-docs", "invoke": "api-docs", "source": "project", "scope": {"k": "project", "path": "~/projects/shop-app"}, "description": "Write or update reference docs for the public API from the source code and docstrings. Use when endpoints change.", "path": "~/demo/api-docs/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-14T05:28", "lines": 54, "files": 5, "body": "---\nname: api-docs\ndescription: Write or update reference docs for the public API from the source code and docstrings. Use when endpoints change.\n---\n\n# api-docs\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 3, "last_used": "2026-11-02T05:28:04.000Z", "used_in": ["~/notes", "~/projects/blog", "~/projects/cli-tool"], "tags": ["Docs"], "plant": {"src": "assets/thumbs/plants-11-tulip.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "郁金香", "name_en": "Tulip"}}, {"id": "plugin:figma:design-to-code", "name": "design-to-code", "invoke": "figma:design-to-code", "source": "plugin", "scope": {"k": "plugin", "plugin": "figma", "v": "1.2.0"}, "description": "Implement a Figma design as production code. Use when the user shares a Figma link and wants it built as a page or component.", "path": "~/demo/design-to-code/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-15T05:28", "lines": 106, "files": 2, "body": "---\nname: design-to-code\ndescription: Implement a Figma design as production code. Use when the user shares a Figma link and wants it built as a page or component.\n---\n\n# design-to-code\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 9, "last_used": "2026-11-01T05:28:04.000Z", "used_in": ["~/projects/blog", "~/projects/cli-tool", "~/projects/shop-app"], "tags": ["Design"], "plant": {"src": "assets/thumbs/plants-20-hyacinth.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "风信子", "name_en": "Hyacinth"}}, {"id": "plugin:figma:make-diagram", "name": "make-diagram", "invoke": "figma:make-diagram", "source": "plugin", "scope": {"k": "plugin", "plugin": "figma", "v": "1.2.0"}, "description": "Create a diagram in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.", "path": "~/demo/make-diagram/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-16T05:28", "lines": 161, "files": 4, "body": "---\nname: make-diagram\ndescription: Create a diagram in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.\n---\n\n# make-diagram\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": ["Design"], "plant": {"src": "assets/thumbs/plants-25-crocus.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "番红花", "name_en": "Crocus"}}, {"id": "plugin:figma:make-flowchart", "name": "make-flowchart", "invoke": "figma:make-flowchart", "source": "plugin", "scope": {"k": "plugin", "plugin": "figma", "v": "1.2.0"}, "description": "Create a flowchart in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.", "path": "~/demo/make-flowchart/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-10T05:28", "lines": 117, "files": 2, "body": "---\nname: make-flowchart\ndescription: Create a flowchart in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.\n---\n\n# make-flowchart\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": ["Design"], "plant": {"src": "assets/thumbs/plants-02-cherry-blossom.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "樱花", "name_en": "Cherry Blossom"}}, {"id": "plugin:lint-kit:auto-fix", "name": "auto-fix", "invoke": "lint-kit:auto-fix", "source": "plugin", "scope": {"k": "plugin", "plugin": "lint-kit", "v": "1.2.0"}, "description": "Run the project's linters and fix what can be fixed automatically, then summarize what is left. Use after large edits.", "path": "~/demo/auto-fix/SKILL.md", "dir": "", "linked": null, "modified": "2026-08-30T05:28", "lines": 137, "files": 1, "body": "---\nname: auto-fix\ndescription: Run the project's linters and fix what can be fixed automatically, then summarize what is left. Use after large edits.\n---\n\n# auto-fix\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 5, "last_used": "2026-11-02T05:28:04.000Z", "used_in": ["~/notes", "~/projects/cli-tool", "~/projects/shop-app"], "tags": [], "update": {"k": "plugin", "new": "1.4.0", "old": "1.2.0", "fresh": "last", "date": ""}, "plant": {"src": "assets/thumbs/plants-04-lavender.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "薰衣草", "name_en": "Lavender"}}, {"id": "anthropic:anthropic-skills:pdf", "name": "pdf", "invoke": "anthropic-skills:pdf", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Read, fill, merge, split or create PDF files. Use whenever the user mentions a PDF or asks to produce one.", "path": "~/demo/pdf/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-27T05:28", "lines": 151, "files": 6, "body": "---\nname: pdf\ndescription: Read, fill, merge, split or create PDF files. Use whenever the user mentions a PDF or asks to produce one.\n---\n\n# pdf\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 17, "last_used": "2026-11-02T05:28:04.000Z", "used_in": ["~/notes"], "tags": ["Docs"], "plant": {"src": "assets/thumbs/plants-03-sunflower.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "向日葵", "name_en": "Sunflower"}}, {"id": "anthropic:anthropic-skills:docx", "name": "docx", "invoke": "anthropic-skills:docx", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create, read and edit Word documents. Use whenever the user asks for a .docx file.", "path": "~/demo/docx/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-29T05:28", "lines": 148, "files": 3, "body": "---\nname: docx\ndescription: Create, read and edit Word documents. Use whenever the user asks for a .docx file.\n---\n\n# docx\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 11, "last_used": "2026-11-01T05:28:04.000Z", "used_in": ["~/projects/blog", "~/projects/cli-tool", "~/projects/shop-app"], "tags": ["Docs"], "plant": {"src": "assets/thumbs/plants-40-basil.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "罗勒", "name_en": "Basil"}}, {"id": "anthropic:anthropic-skills:xlsx", "name": "xlsx", "invoke": "anthropic-skills:xlsx", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create, read and edit spreadsheets. Use whenever a spreadsheet is the main input or output.", "path": "~/demo/xlsx/SKILL.md", "dir": "", "linked": null, "modified": "2026-08-29T05:28", "lines": 50, "files": 2, "body": "---\nname: xlsx\ndescription: Create, read and edit spreadsheets. Use whenever a spreadsheet is the main input or output.\n---\n\n# xlsx\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 4, "last_used": "2026-08-24T05:28:04.000Z", "used_in": ["~/notes", "~/projects/blog"], "tags": [], "plant": {"src": "assets/thumbs/plants-38-aeonium.png", "mid": "assets/thumbs/growth-m05-rosette.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "黑法师", "name_en": "Aeonium"}}, {"id": "anthropic:anthropic-skills:pptx", "name": "pptx", "invoke": "anthropic-skills:pptx", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create, read and edit slide decks. Use whenever a .pptx file is involved.", "path": "~/demo/pptx/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-16T05:28", "lines": 127, "files": 2, "body": "---\nname: pptx\ndescription: Create, read and edit slide decks. Use whenever a .pptx file is involved.\n---\n\n# pptx\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 2, "last_used": "2026-11-01T05:28:04.000Z", "used_in": ["~/projects/shop-app"], "tags": [], "plant": {"src": "assets/thumbs/plants-24-daffodil.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "水仙", "name_en": "Daffodil"}}, {"id": "anthropic:anthropic-skills:skill-creator", "name": "skill-creator", "invoke": "anthropic-skills:skill-creator", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create new skills, improve existing ones and measure how well they trigger.", "path": "~/demo/skill-creator/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-30T05:28", "lines": 154, "files": 5, "body": "---\nname: skill-creator\ndescription: Create new skills, improve existing ones and measure how well they trigger.\n---\n\n# skill-creator\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 1, "last_used": "2026-11-01T05:28:04.000Z", "used_in": ["~/notes"], "tags": [], "plant": {"src": "assets/thumbs/plants-09-daisy.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "雏菊", "name_en": "Daisy"}}, {"id": "anthropic:anthropic-skills:deep-research", "name": "deep-research", "invoke": "anthropic-skills:deep-research", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Research a topic across many sources and write a cited report.", "path": "~/demo/deep-research/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-08T05:28", "lines": 166, "files": 3, "body": "---\nname: deep-research\ndescription: Research a topic across many sources and write a cited report.\n---\n\n# deep-research\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "plant": {"src": "assets/thumbs/plants-23-pansy.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "三色堇", "name_en": "Pansy"}}, {"id": "builtin:code-review", "name": "code-review", "invoke": "code-review", "source": "builtin", "scope": {"k": "builtin"}, "description": "审查代码改动找 bug", "description_en": "Review code changes for bugs", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 6, "last_used": "2026-10-21T05:28:04.000Z", "used_in": ["~/projects/blog"], "tags": [], "plant": {"src": "assets/thumbs/plants-36-barrel-cactus.png", "mid": "assets/thumbs/growth-m08-cactus.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "金琥仙人球", "name_en": "Barrel Cactus"}}, {"id": "builtin:simplify", "name": "simplify", "invoke": "simplify", "source": "builtin", "scope": {"k": "builtin"}, "description": "清理和简化改过的代码", "description_en": "Clean up and simplify changed code", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 2, "last_used": "2026-08-24T05:28:04.000Z", "used_in": ["~/projects/blog", "~/projects/cli-tool"], "tags": [], "plant": {"src": "assets/thumbs/plants-27-cosmos.png", "mid": "assets/thumbs/growth-m07-fine-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "波斯菊", "name_en": "Cosmos"}}, {"id": "builtin:claude-api", "name": "claude-api", "invoke": "claude-api", "source": "builtin", "scope": {"k": "builtin"}, "description": "Claude API 和 Anthropic SDK 参考", "description_en": "Claude API and Anthropic SDK reference", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 1, "last_used": "2026-11-01T05:28:04.000Z", "used_in": ["~/notes"], "tags": [], "plant": {"src": "assets/thumbs/plants-21-peony.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "牡丹", "name_en": "Peony"}}, {"id": "builtin:init", "name": "init", "invoke": "init", "source": "builtin", "scope": {"k": "builtin"}, "description": "生成 CLAUDE.md", "description_en": "Generate a CLAUDE.md", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "plant": {"src": "assets/thumbs/plants-01-hydrangea.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "绣球", "name_en": "Hydrangea"}}, {"id": "builtin:security-review", "name": "security-review", "invoke": "security-review", "source": "builtin", "scope": {"k": "builtin"}, "description": "安全审查当前分支改动", "description_en": "Security review of the current branch", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "plant": {"src": "assets/thumbs/plants-29-dahlia.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "大丽花", "name_en": "Dahlia"}}, {"id": "builtin:loop", "name": "loop", "invoke": "loop", "source": "builtin", "scope": {"k": "builtin"}, "description": "按间隔重复执行一个任务", "description_en": "Repeat a task on an interval", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "plant": {"src": "assets/thumbs/plants-37-sedum.png", "mid": "assets/thumbs/growth-m06-jade.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "虹之玉", "name_en": "Sedum"}}, {"id": "codex:repo-summary", "name": "repo-summary", "invoke": "repo-summary", "source": "codex", "scope": {"k": "codex"}, "description": "Summarize an unfamiliar repository: layout, entry points, how to run it and where the tests are.", "path": "~/demo/repo-summary/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-18T05:28", "lines": 30, "files": 5, "body": "---\nname: repo-summary\ndescription: Summarize an unfamiliar repository: layout, entry points, how to run it and where the tests are.\n---\n\n# repo-summary\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "plant": {"src": "assets/thumbs/plants-05-pothos.png", "mid": "assets/thumbs/growth-m04-heart-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "绿萝", "name_en": "Pothos"}}], "warnings": [{"code": "similar", "skills": ["plugin:figma:make-diagram", "plugin:figma:make-flowchart"], "a": "figma:make-diagram", "b": "figma:make-flowchart", "pct": 100}, {"code": "similar", "skills": ["anthropic:anthropic-skills:docx", "anthropic:anthropic-skills:pptx"], "a": "anthropic-skills:docx", "b": "anthropic-skills:pptx", "pct": 33}, {"code": "format", "skills": ["user:tiny"], "skill": "tiny", "problem": "short_desc"}], "ghosts": [{"invoke": "old-helper", "uses": 4, "last_used": "2026-08-14T05:28:04.000Z"}], "total_calls": 103, "recent": [{"ts": "2026-11-02T03:28:04.000Z", "invoke": "anthropic-skills:skill-creator", "project": "~/projects/shop-app"}, {"ts": "2026-11-01T19:28:04.000Z", "invoke": "meeting-notes", "project": "~/projects/blog"}, {"ts": "2026-11-01T13:28:04.000Z", "invoke": "code-tutor", "project": "~/projects/blog"}, {"ts": "2026-11-01T11:28:04.000Z", "invoke": "lint-kit:auto-fix", "project": "~/projects/blog"}, {"ts": "2026-11-01T02:28:04.000Z", "invoke": "release-checklist", "project": "~/projects/shop-app"}, {"ts": "2026-10-31T19:28:04.000Z", "invoke": "anthropic-skills:docx", "project": "~/projects/shop-app"}, {"ts": "2026-10-31T14:28:04.000Z", "invoke": "anthropic-skills:pptx", "project": "~/projects/shop-app"}, {"ts": "2026-10-31T04:28:04.000Z", "invoke": "simplify", "project": "~/projects/blog"}, {"ts": "2026-10-30T23:28:04.000Z", "invoke": "simplify", "project": "~/projects/cli-tool"}, {"ts": "2026-10-30T21:28:04.000Z", "invoke": "anthropic-skills:docx", "project": "~/notes"}, {"ts": "2026-10-30T19:28:04.000Z", "invoke": "code-tutor", "project": "~/projects/blog"}, {"ts": "2026-10-30T04:28:04.000Z", "invoke": "anthropic-skills:pdf", "project": "~/projects/cli-tool"}, {"ts": "2026-10-30T03:28:04.000Z", "invoke": "figma:design-to-code", "project": "~/projects/blog"}, {"ts": "2026-10-29T13:28:04.000Z", "invoke": "figma:design-to-code", "project": "~/projects/cli-tool"}, {"ts": "2026-10-29T07:28:04.000Z", "invoke": "meeting-notes", "project": "~/projects/blog"}, {"ts": "2026-10-29T00:28:04.000Z", "invoke": "code-review", "project": "~/projects/blog"}, {"ts": "2026-10-28T23:28:04.000Z", "invoke": "anthropic-skills:docx", "project": "~/projects/cli-tool"}, {"ts": "2026-10-28T23:28:04.000Z", "invoke": "code-review", "project": "~/projects/cli-tool"}, {"ts": "2026-10-28T08:28:04.000Z", "invoke": "code-review", "project": "~/projects/cli-tool"}, {"ts": "2026-10-28T05:28:04.000Z", "invoke": "api-docs", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T21:28:04.000Z", "invoke": "api-docs", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T19:28:04.000Z", "invoke": "meeting-notes", "project": "~/projects/shop-app"}, {"ts": "2026-10-27T14:28:04.000Z", "invoke": "figma:design-to-code", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T08:28:04.000Z", "invoke": "anthropic-skills:xlsx", "project": "~/notes"}, {"ts": "2026-10-27T05:28:04.000Z", "invoke": "release-checklist", "project": "~/projects/shop-app"}, {"ts": "2026-10-27T02:28:04.000Z", "invoke": "release-checklist", "project": "~/notes"}, {"ts": "2026-10-27T01:28:04.000Z", "invoke": "code-tutor", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T00:28:04.000Z", "invoke": "lint-kit:auto-fix", "project": "~/projects/cli-tool"}, {"ts": "2026-10-26T20:28:04.000Z", "invoke": "lint-kit:auto-fix", "project": "~/projects/cli-tool"}, {"ts": "2026-10-26T19:28:04.000Z", "invoke": "claude-api", "project": "~/projects/blog"}], "tag_en": {}, "growth": {"mid": 1, "mature": 5}, "greenhouse": "assets/thumbs/greenhouse-greenhouse-v1.png"};
+const DATA = {"generated": "2026-11-02T01:14", "skills": [{"id": "user:meeting-notes", "name": "meeting-notes", "invoke": "meeting-notes", "source": "user", "scope": {"k": "all"}, "description": "Turn a meeting transcript into short notes with decisions, owners and next steps. Use when the user pastes a transcript or asks for minutes.", "path": "~/demo/meeting-notes/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-20T06:14", "lines": 68, "files": 4, "body": "---\nname: meeting-notes\ndescription: Turn a meeting transcript into short notes with decisions, owners and next steps. Use when the user pastes a transcript or asks for minutes.\n---\n\n# meeting-notes\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 23, "last_used": "2026-11-02T06:14:50.000Z", "used_in": ["~/projects/blog"], "tags": ["Notes"], "ctx": {"tok": 39, "chars": 157, "trunc": false, "cur": true}, "weeks": [0, 1, 1, 3, 1, 3, 3, 3], "co": [["anthropic-skills:docx", 6], ["anthropic-skills:pdf", 3]], "missed": {"n": 3, "ex": [{"q": "can you pull out the action items from this call transcript", "ts": "2026-10-28T10:14:50.000Z", "project": "~/notes"}, {"q": "帮我把今天站会的录音整理成纪要，谁负责什么写清楚", "ts": "2026-10-21T18:14:50.000Z", "project": "~/notes"}, {"q": "summarize the decisions from the planning meeting notes below", "ts": "2026-10-06T14:14:50.000Z", "project": "~/projects/blog"}]}, "mis": null, "plant": {"src": "assets/thumbs/plants-17-marigold.png", "mid": "assets/thumbs/growth-m07-fine-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "万寿菊", "name_en": "Marigold"}, "name_zh": "会议纪要", "blurb_zh": "把会议记录整理成纪要", "blurb_en": "Turn a meeting transcript into notes"}, {"id": "user:code-tutor", "name": "code-tutor", "invoke": "code-tutor", "source": "user", "scope": {"k": "all"}, "description": "Explain a piece of code step by step for a beginner, with a small example for every new idea. Use when the user asks what some code does.", "path": "~/demo/code-tutor/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-06T06:14", "lines": 137, "files": 1, "body": "---\nname: code-tutor\ndescription: Explain a piece of code step by step for a beginner, with a small example for every new idea. Use when the user asks what some code does.\n---\n\n# code-tutor\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 12, "last_used": "2026-10-30T06:14:50.000Z", "used_in": ["~/projects/cli-tool"], "tags": ["Learning"], "ctx": {"tok": 38, "chars": 151, "trunc": false, "cur": true}, "weeks": [0, 1, 0, 0, 4, 1, 0, 2], "co": [["code-review", 4]], "missed": {"n": 1, "ex": [{"q": "what does this regex do, explain it like I'm new to Python", "ts": "2026-10-24T03:14:50.000Z", "project": "~/projects/cli-tool"}]}, "mis": null, "plant": {"src": "assets/thumbs/plants-19-hibiscus.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "扶桑花", "name_en": "Hibiscus"}, "name_zh": "代码讲解", "blurb_zh": "一步步讲解一段代码", "blurb_en": "Explain code step by step"}, {"id": "user:tiny", "name": "tiny", "invoke": "tiny", "source": "user", "scope": {"k": "all"}, "description": "Make text shorter.", "path": "~/demo/tiny/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-25T06:14", "lines": 86, "files": 1, "body": "---\nname: tiny\ndescription: Make text shorter.\n---\n\n# tiny\n\nDemo skill used for screenshots.\n", "problems": ["short_desc"], "uses": 0, "last_used": null, "used_in": [], "tags": [], "ctx": {"tok": 6, "chars": 26, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-22-geranium.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "天竺葵", "name_en": "Geranium"}, "name_zh": "精简文字", "blurb_zh": "把文字改短", "blurb_en": "Make text shorter"}, {"id": "project:release-checklist", "name": "release-checklist", "invoke": "release-checklist", "source": "project", "scope": {"k": "project", "path": "~/projects/shop-app"}, "description": "Walk through the release checklist for this repo: changelog, version bump, tag, and smoke test. Use before cutting a release.", "path": "~/demo/release-checklist/SKILL.md", "dir": "", "linked": null, "modified": "2026-08-21T06:14", "lines": 64, "files": 3, "body": "---\nname: release-checklist\ndescription: Walk through the release checklist for this repo: changelog, version bump, tag, and smoke test. Use before cutting a release.\n---\n\n# release-checklist\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 7, "last_used": "2026-10-03T06:14:50.000Z", "used_in": ["~/projects/blog"], "tags": ["Shipping"], "ctx": {"tok": 36, "chars": 146, "trunc": false, "cur": true}, "weeks": [0, 1, 1, 1, 0, 0, 0, 0], "co": [["code-review", 3], ["lint-kit:auto-fix", 2]], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-39-oxalis.png", "mid": "assets/thumbs/growth-m04-heart-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "紫叶酢浆草", "name_en": "Oxalis"}, "name_zh": "发布检查", "blurb_zh": "发版前逐项检查", "blurb_en": "Walk the release checklist"}, {"id": "project:api-docs", "name": "api-docs", "invoke": "api-docs", "source": "project", "scope": {"k": "project", "path": "~/projects/shop-app"}, "description": "Write or update reference docs for the public API from the source code and docstrings. Use when endpoints change.", "path": "~/demo/api-docs/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-14T06:14", "lines": 54, "files": 5, "body": "---\nname: api-docs\ndescription: Write or update reference docs for the public API from the source code and docstrings. Use when endpoints change.\n---\n\n# api-docs\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 3, "last_used": "2026-11-02T06:14:50.000Z", "used_in": ["~/notes", "~/projects/blog", "~/projects/cli-tool"], "tags": ["Docs"], "ctx": {"tok": 31, "chars": 125, "trunc": true, "cur": true}, "weeks": [0, 0, 1, 0, 0, 1, 0, 1], "co": [["code-review", 1]], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-11-tulip.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "郁金香", "name_en": "Tulip"}, "name_zh": "API 文档", "blurb_zh": "根据代码写 API 文档", "blurb_en": "Write API docs from the code"}, {"id": "plugin:figma:design-to-code", "name": "design-to-code", "invoke": "figma:design-to-code", "source": "plugin", "scope": {"k": "plugin", "plugin": "figma", "v": "1.2.0"}, "description": "Implement a Figma design as production code. Use when the user shares a Figma link and wants it built as a page or component.", "path": "~/demo/design-to-code/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-15T06:14", "lines": 106, "files": 2, "body": "---\nname: design-to-code\ndescription: Implement a Figma design as production code. Use when the user shares a Figma link and wants it built as a page or component.\n---\n\n# design-to-code\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 9, "last_used": "2026-11-01T06:14:50.000Z", "used_in": ["~/projects/blog", "~/projects/cli-tool", "~/projects/shop-app"], "tags": ["Design"], "ctx": {"tok": 37, "chars": 149, "trunc": false, "cur": true}, "weeks": [0, 1, 1, 1, 1, 0, 1, 1], "co": [["lint-kit:auto-fix", 2]], "missed": null, "mis": {"n": 1, "ex": [{"q": "not that, I only wanted a quick sketch of the layout", "ts": "2026-10-19T23:14:50.000Z", "project": "~/projects/shop-app"}]}, "plant": {"src": "assets/thumbs/plants-20-hyacinth.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "风信子", "name_en": "Hyacinth"}, "name_zh": "Figma 转代码", "blurb_zh": "把 Figma 设计做成代码", "blurb_en": "Turn a Figma design into code"}, {"id": "plugin:figma:make-diagram", "name": "make-diagram", "invoke": "figma:make-diagram", "source": "plugin", "scope": {"k": "plugin", "plugin": "figma", "v": "1.2.0"}, "description": "Create a diagram in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.", "path": "~/demo/make-diagram/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-16T06:14", "lines": 161, "files": 4, "body": "---\nname: make-diagram\ndescription: Create a diagram in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.\n---\n\n# make-diagram\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": ["Design"], "ctx": {"tok": 36, "chars": 143, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-25-crocus.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "番红花", "name_en": "Crocus"}, "name_zh": "Figma 画图", "blurb_zh": "在 Figma 里画示意图", "blurb_en": "Draw a diagram in Figma"}, {"id": "plugin:figma:make-flowchart", "name": "make-flowchart", "invoke": "figma:make-flowchart", "source": "plugin", "scope": {"k": "plugin", "plugin": "figma", "v": "1.2.0"}, "description": "Create a flowchart in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.", "path": "~/demo/make-flowchart/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-10T06:14", "lines": 117, "files": 2, "body": "---\nname: make-flowchart\ndescription: Create a flowchart in Figma from a description. Use when the user wants a flowchart or architecture diagram drawn in Figma.\n---\n\n# make-flowchart\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": ["Design"], "ctx": {"tok": 37, "chars": 147, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-02-cherry-blossom.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "樱花", "name_en": "Cherry Blossom"}, "name_zh": "Figma 流程图", "blurb_zh": "在 Figma 里画流程图", "blurb_en": "Draw a flowchart in Figma"}, {"id": "plugin:lint-kit:auto-fix", "name": "auto-fix", "invoke": "lint-kit:auto-fix", "source": "plugin", "scope": {"k": "plugin", "plugin": "lint-kit", "v": "1.2.0"}, "description": "Run the project's linters and fix what can be fixed automatically, then summarize what is left. Use after large edits.", "path": "~/demo/auto-fix/SKILL.md", "dir": "", "linked": null, "modified": "2026-08-30T06:14", "lines": 137, "files": 1, "body": "---\nname: auto-fix\ndescription: Run the project's linters and fix what can be fixed automatically, then summarize what is left. Use after large edits.\n---\n\n# auto-fix\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 5, "last_used": "2026-11-02T06:14:50.000Z", "used_in": ["~/notes", "~/projects/cli-tool", "~/projects/shop-app"], "tags": [], "update": {"k": "plugin", "new": "1.4.0", "old": "1.2.0", "fresh": "last", "date": ""}, "ctx": {"tok": 35, "chars": 139, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 1, 0, 1, 1, 1], "co": [["release-checklist", 2], ["figma:design-to-code", 2]], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-04-lavender.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "薰衣草", "name_en": "Lavender"}, "name_zh": "自动修复", "blurb_zh": "跑 lint 并自动修复", "blurb_en": "Run linters and fix what they can"}, {"id": "anthropic:anthropic-skills:pdf", "name": "pdf", "invoke": "anthropic-skills:pdf", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Read, fill, merge, split or create PDF files. Use whenever the user mentions a PDF or asks to produce one.", "path": "~/demo/pdf/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-27T06:14", "lines": 151, "files": 6, "body": "---\nname: pdf\ndescription: Read, fill, merge, split or create PDF files. Use whenever the user mentions a PDF or asks to produce one.\n---\n\n# pdf\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 17, "last_used": "2026-11-02T06:14:50.000Z", "used_in": ["~/notes"], "tags": ["Docs"], "ctx": {"tok": 32, "chars": 130, "trunc": false, "cur": true}, "weeks": [0, 3, 3, 2, 0, 1, 0, 2], "co": [["anthropic-skills:docx", 5], ["meeting-notes", 3], ["anthropic-skills:xlsx", 2]], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-03-sunflower.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "向日葵", "name_en": "Sunflower"}, "name_zh": "PDF 处理", "blurb_zh": "读取、合并、填写和生成 PDF", "blurb_en": "Read, merge, fill and create PDFs"}, {"id": "anthropic:anthropic-skills:docx", "name": "docx", "invoke": "anthropic-skills:docx", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create, read and edit Word documents. Use whenever the user asks for a .docx file.", "path": "~/demo/docx/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-29T06:14", "lines": 148, "files": 3, "body": "---\nname: docx\ndescription: Create, read and edit Word documents. Use whenever the user asks for a .docx file.\n---\n\n# docx\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 11, "last_used": "2026-11-01T06:14:50.000Z", "used_in": ["~/projects/blog", "~/projects/cli-tool", "~/projects/shop-app"], "tags": ["Docs"], "ctx": {"tok": 27, "chars": 107, "trunc": false, "cur": true}, "weeks": [0, 1, 0, 1, 0, 3, 2, 1], "co": [["meeting-notes", 6], ["anthropic-skills:pdf", 5]], "missed": null, "mis": {"n": 2, "ex": [{"q": "不对，我要的是 PDF，不是 Word 文件", "ts": "2026-10-27T12:14:50.000Z", "project": "~/notes"}, {"q": "wrong format, I wanted a markdown file", "ts": "2026-10-14T12:14:50.000Z", "project": "~/projects/blog"}]}, "plant": {"src": "assets/thumbs/plants-40-basil.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "罗勒", "name_en": "Basil"}, "name_zh": "Word 文档", "blurb_zh": "创建和编辑 Word 文档", "blurb_en": "Create and edit Word documents"}, {"id": "anthropic:anthropic-skills:xlsx", "name": "xlsx", "invoke": "anthropic-skills:xlsx", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create, read and edit spreadsheets. Use whenever a spreadsheet is the main input or output.", "path": "~/demo/xlsx/SKILL.md", "dir": "", "linked": null, "modified": "2026-08-29T06:14", "lines": 50, "files": 2, "body": "---\nname: xlsx\ndescription: Create, read and edit spreadsheets. Use whenever a spreadsheet is the main input or output.\n---\n\n# xlsx\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 4, "last_used": "2026-08-24T06:14:50.000Z", "used_in": ["~/notes", "~/projects/blog"], "tags": [], "ctx": {"tok": 29, "chars": 116, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [["anthropic-skills:pdf", 2]], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-38-aeonium.png", "mid": "assets/thumbs/growth-m05-rosette.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "黑法师", "name_en": "Aeonium"}, "name_zh": "Excel 表格", "blurb_zh": "创建和编辑 Excel 表格", "blurb_en": "Create and edit spreadsheets"}, {"id": "anthropic:anthropic-skills:pptx", "name": "pptx", "invoke": "anthropic-skills:pptx", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create, read and edit slide decks. Use whenever a .pptx file is involved.", "path": "~/demo/pptx/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-16T06:14", "lines": 127, "files": 2, "body": "---\nname: pptx\ndescription: Create, read and edit slide decks. Use whenever a .pptx file is involved.\n---\n\n# pptx\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 2, "last_used": "2026-11-01T06:14:50.000Z", "used_in": ["~/projects/shop-app"], "tags": [], "ctx": {"tok": 24, "chars": 98, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 1, 0, 1], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-24-daffodil.png", "mid": "assets/thumbs/growth-m02-narrow-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "水仙", "name_en": "Daffodil"}, "name_zh": "PPT 演示文稿", "blurb_zh": "创建和编辑 PPT", "blurb_en": "Create and edit slide decks"}, {"id": "anthropic:anthropic-skills:skill-creator", "name": "skill-creator", "invoke": "anthropic-skills:skill-creator", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Create new skills, improve existing ones and measure how well they trigger.", "path": "~/demo/skill-creator/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-30T06:14", "lines": 154, "files": 5, "body": "---\nname: skill-creator\ndescription: Create new skills, improve existing ones and measure how well they trigger.\n---\n\n# skill-creator\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 1, "last_used": "2026-11-01T06:14:50.000Z", "used_in": ["~/notes"], "tags": [], "ctx": {"tok": 27, "chars": 109, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 1], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-09-daisy.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "雏菊", "name_en": "Daisy"}, "name_zh": "Skill 制作", "blurb_zh": "编写、改进和测试 skill", "blurb_en": "Write, improve and test skills"}, {"id": "anthropic:anthropic-skills:deep-research", "name": "deep-research", "invoke": "anthropic-skills:deep-research", "source": "anthropic", "scope": {"k": "anthropic"}, "description": "Research a topic across many sources and write a cited report.", "path": "~/demo/deep-research/SKILL.md", "dir": "", "linked": null, "modified": "2026-09-08T06:14", "lines": 166, "files": 3, "body": "---\nname: deep-research\ndescription: Research a topic across many sources and write a cited report.\n---\n\n# deep-research\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "ctx": {"tok": 24, "chars": 96, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-23-pansy.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "三色堇", "name_en": "Pansy"}, "name_zh": "深度调研", "blurb_zh": "多来源调研并写成报告", "blurb_en": "Research many sources into one report"}, {"id": "builtin:code-review", "name": "code-review", "invoke": "code-review", "source": "builtin", "scope": {"k": "builtin"}, "description": "审查代码改动找 bug", "description_en": "Review code changes for bugs", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 6, "last_used": "2026-10-21T06:14:50.000Z", "used_in": ["~/projects/blog"], "tags": [], "ctx": {"tok": 132, "chars": 43, "trunc": false, "cur": true}, "weeks": [2, 0, 1, 0, 0, 1, 1, 0], "co": [["code-tutor", 4], ["release-checklist", 3], ["simplify", 2], ["api-docs", 1]], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-36-barrel-cactus.png", "mid": "assets/thumbs/growth-m08-cactus.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "金琥仙人球", "name_en": "Barrel Cactus"}, "name_zh": "代码审查", "blurb_zh": "审查代码改动找 bug", "blurb_en": "Review code changes for bugs"}, {"id": "builtin:simplify", "name": "simplify", "invoke": "simplify", "source": "builtin", "scope": {"k": "builtin"}, "description": "清理和简化改过的代码", "description_en": "Clean up and simplify changed code", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 2, "last_used": "2026-08-24T06:14:50.000Z", "used_in": ["~/projects/blog", "~/projects/cli-tool"], "tags": [], "ctx": {"tok": 149, "chars": 46, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [["code-review", 2]], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-27-cosmos.png", "mid": "assets/thumbs/growth-m07-fine-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "波斯菊", "name_en": "Cosmos"}, "name_zh": "代码精简", "blurb_zh": "清理和简化改过的代码", "blurb_en": "Clean up and simplify changed code"}, {"id": "builtin:claude-api", "name": "claude-api", "invoke": "claude-api", "source": "builtin", "scope": {"k": "builtin"}, "description": "Claude API 和 Anthropic SDK 参考", "description_en": "Claude API and Anthropic SDK reference", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 1, "last_used": "2026-11-01T06:14:50.000Z", "used_in": ["~/notes"], "tags": [], "ctx": {"tok": 77, "chars": 52, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 1], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-21-peony.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "牡丹", "name_en": "Peony"}, "name_zh": "Claude API 参考", "blurb_zh": "Claude API 和 Anthropic SDK 参考", "blurb_en": "Claude API and Anthropic SDK reference"}, {"id": "builtin:init", "name": "init", "invoke": "init", "source": "builtin", "scope": {"k": "builtin"}, "description": "生成 CLAUDE.md", "description_en": "Generate a CLAUDE.md", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "ctx": {"tok": 150, "chars": 28, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-01-hydrangea.png", "mid": "assets/thumbs/growth-m03-woody-sapling.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "绣球", "name_en": "Hydrangea"}, "name_zh": "生成 CLAUDE.md", "blurb_zh": "生成 CLAUDE.md", "blurb_en": "Generate a CLAUDE.md"}, {"id": "builtin:security-review", "name": "security-review", "invoke": "security-review", "source": "builtin", "scope": {"k": "builtin"}, "description": "安全审查当前分支改动", "description_en": "Security review of the current branch", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "ctx": {"tok": 84, "chars": 56, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-29-dahlia.png", "mid": "assets/thumbs/growth-m01-broadleaf-herb.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "大丽花", "name_en": "Dahlia"}, "name_zh": "安全审查", "blurb_zh": "安全审查当前分支改动", "blurb_en": "Security review of the current branch"}, {"id": "builtin:loop", "name": "loop", "invoke": "loop", "source": "builtin", "scope": {"k": "builtin"}, "description": "按间隔重复执行一个任务", "description_en": "Repeat a task on an interval", "path": "", "dir": "", "modified": "", "lines": 0, "files": 0, "body": "", "bundled": true, "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "ctx": {"tok": 153, "chars": 36, "trunc": false, "cur": true}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-37-sedum.png", "mid": "assets/thumbs/growth-m06-jade.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "虹之玉", "name_en": "Sedum"}, "name_zh": "循环执行", "blurb_zh": "按间隔重复执行一个任务", "blurb_en": "Repeat a task on an interval"}, {"id": "codex:repo-summary", "name": "repo-summary", "invoke": "repo-summary", "source": "codex", "scope": {"k": "codex"}, "description": "Summarize an unfamiliar repository: layout, entry points, how to run it and where the tests are.", "path": "~/demo/repo-summary/SKILL.md", "dir": "", "linked": null, "modified": "2026-10-18T06:14", "lines": 30, "files": 5, "body": "---\nname: repo-summary\ndescription: Summarize an unfamiliar repository: layout, entry points, how to run it and where the tests are.\n---\n\n# repo-summary\n\nDemo skill used for screenshots.\n", "problems": [], "uses": 0, "last_used": null, "used_in": [], "tags": [], "ctx": {"tok": 28, "chars": 112, "trunc": false, "cur": false}, "weeks": [0, 0, 0, 0, 0, 0, 0, 0], "co": [], "missed": null, "mis": null, "plant": {"src": "assets/thumbs/plants-05-pothos.png", "mid": "assets/thumbs/growth-m04-heart-leaf.png", "seed": "assets/thumbs/growth-s00-seeded-soil.png", "name": "绿萝", "name_en": "Pothos"}, "name_zh": "仓库速览", "blurb_zh": "快速看懂一个陌生仓库", "blurb_en": "Get the gist of an unfamiliar repo"}], "warnings": [{"code": "similar", "skills": ["plugin:figma:make-diagram", "plugin:figma:make-flowchart"], "a": "figma:make-diagram", "b": "figma:make-flowchart", "pct": 100}, {"code": "similar", "skills": ["anthropic:anthropic-skills:docx", "anthropic:anthropic-skills:pptx"], "a": "anthropic-skills:docx", "b": "anthropic-skills:pptx", "pct": 33}, {"code": "format", "skills": ["user:tiny"], "skill": "tiny", "problem": "short_desc"}], "ghosts": [{"invoke": "old-helper", "uses": 4, "last_used": "2026-08-14T06:14:50.000Z"}], "total_calls": 103, "recent": [{"ts": "2026-11-02T04:14:50.000Z", "invoke": "anthropic-skills:skill-creator", "project": "~/projects/shop-app"}, {"ts": "2026-11-01T20:14:50.000Z", "invoke": "meeting-notes", "project": "~/projects/blog"}, {"ts": "2026-11-01T14:14:50.000Z", "invoke": "code-tutor", "project": "~/projects/blog"}, {"ts": "2026-11-01T12:14:50.000Z", "invoke": "lint-kit:auto-fix", "project": "~/projects/blog"}, {"ts": "2026-11-01T03:14:50.000Z", "invoke": "release-checklist", "project": "~/projects/shop-app"}, {"ts": "2026-10-31T20:14:50.000Z", "invoke": "anthropic-skills:docx", "project": "~/projects/shop-app"}, {"ts": "2026-10-31T15:14:50.000Z", "invoke": "anthropic-skills:pptx", "project": "~/projects/shop-app"}, {"ts": "2026-10-31T05:14:50.000Z", "invoke": "simplify", "project": "~/projects/blog"}, {"ts": "2026-10-31T00:14:50.000Z", "invoke": "simplify", "project": "~/projects/cli-tool"}, {"ts": "2026-10-30T22:14:50.000Z", "invoke": "anthropic-skills:docx", "project": "~/notes"}, {"ts": "2026-10-30T20:14:50.000Z", "invoke": "code-tutor", "project": "~/projects/blog"}, {"ts": "2026-10-30T05:14:50.000Z", "invoke": "anthropic-skills:pdf", "project": "~/projects/cli-tool"}, {"ts": "2026-10-30T04:14:50.000Z", "invoke": "figma:design-to-code", "project": "~/projects/blog"}, {"ts": "2026-10-29T14:14:50.000Z", "invoke": "figma:design-to-code", "project": "~/projects/cli-tool"}, {"ts": "2026-10-29T08:14:50.000Z", "invoke": "meeting-notes", "project": "~/projects/blog"}, {"ts": "2026-10-29T01:14:50.000Z", "invoke": "code-review", "project": "~/projects/blog"}, {"ts": "2026-10-29T00:14:50.000Z", "invoke": "anthropic-skills:docx", "project": "~/projects/cli-tool"}, {"ts": "2026-10-29T00:14:50.000Z", "invoke": "code-review", "project": "~/projects/cli-tool"}, {"ts": "2026-10-28T09:14:50.000Z", "invoke": "code-review", "project": "~/projects/cli-tool"}, {"ts": "2026-10-28T06:14:50.000Z", "invoke": "api-docs", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T22:14:50.000Z", "invoke": "api-docs", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T20:14:50.000Z", "invoke": "meeting-notes", "project": "~/projects/shop-app"}, {"ts": "2026-10-27T15:14:50.000Z", "invoke": "figma:design-to-code", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T09:14:50.000Z", "invoke": "anthropic-skills:xlsx", "project": "~/notes"}, {"ts": "2026-10-27T06:14:50.000Z", "invoke": "release-checklist", "project": "~/projects/shop-app"}, {"ts": "2026-10-27T03:14:50.000Z", "invoke": "release-checklist", "project": "~/notes"}, {"ts": "2026-10-27T02:14:50.000Z", "invoke": "code-tutor", "project": "~/projects/cli-tool"}, {"ts": "2026-10-27T01:14:50.000Z", "invoke": "lint-kit:auto-fix", "project": "~/projects/cli-tool"}, {"ts": "2026-10-26T21:14:50.000Z", "invoke": "lint-kit:auto-fix", "project": "~/projects/cli-tool"}, {"ts": "2026-10-26T20:14:50.000Z", "invoke": "claude-api", "project": "~/projects/blog"}], "tag_en": {}, "growth": {"mid": 1, "mature": 5, "wilt": 30}, "greenhouse": "assets/thumbs/greenhouse-greenhouse-v1.png", "platform": "darwin", "context": {"tok": 1203, "n": 21, "ts": "2026-11-02T06:14:50.000Z", "trunc": 1}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const I18N = {
   zh: {
     title:"Skill 农场", sub:"你电脑上所有的 Claude skill 都种在这里，用得越多长得越好",
     poke:"戳一下温室", houseAria:"农场的小温室",
-    themeAria:"切换配色", toPeach:"换成蜜桃", toBlue:"换成天蓝", langBtn:"EN", langAria:"Switch to English",
-    search:"搜名字或描述…", searchAria:"搜索 skill", viewAria:"显示方式", cards:"卡片", farm:"农场",
+    themeAria:"切换配色", themes:{peach:"蜜桃", blue:"天蓝", night:"夜晚温室"}, langBtn:"EN", langAria:"Switch to English",
+    search:"搜名字或描述…", searchAria:"搜索 skill", viewAria:"显示方式", cards:"卡片", farm:"农场", mini:"极简",
     projAria:"按项目筛选", sortAria:"排序", allProjects:"全部项目",
     sort:{uses:"最常用", recent:"最近用过", name:"按名字", modified:"最近修改"},
     recentH:"最近活动", warnH:"需要留意", ghostH:"用过但现在找不到的",
@@ -286,6 +353,13 @@ const I18N = {
     warnShort:(w, other) => w.code === "similar" && other ? `和 ${other} 描述很像` : w.code === "dup" ? "有同名的 skill" : I18N.zh.problem[w.problem],
     more:n => `，另有 ${n} 条`, showMore:n => `再看 ${n} 条`, showLess:"收起", ghostUses:n => `${n} 次`,
     tagsLabel:"标签", all:"全部", untagged:"没打标签",
+    delBtn:"删除这个 skill", delPluginBtn:"卸载它所在的插件", copyCmd:"复制命令",
+    delTrash:n => `在终端运行下面这行，会把 ${n} 的文件夹移到废纸篓。想恢复的话，从废纸篓拖回原处就行。运行后重新生成页面。`,
+    delRm:n => `在终端运行下面这行会永久删除 ${n} 的文件夹，没法恢复，运行前请确认。运行后重新生成页面。`,
+    delLinked:p => `它是一个链接，这样只会移走链接，原来的文件夹 ${p} 不受影响。`,
+    delProject:"这个 skill 在项目文件夹里。如果项目用 git 管理，删除后记得提交。",
+    delPlugin:(p, n) => `插件里的 skill 不能单独删除。在 Claude Code 里运行下面这条命令，会卸载整个 ${p} 插件，它带的 ${n} 个 skill 会一起移除。`,
+    delBuiltin:"这是自带的 skill，不能删除。",
     fixTitle:"怎么解决", ignore:"忽略这条", restore:"恢复提醒",
     fix:(w, c) => {
       const f = [];
@@ -307,12 +381,29 @@ const I18N = {
       return f;
     },
     foot:g => `生成于 ${g} · 想刷新就重新运行 build.py`,
+    ctxStat:"tokens 每次对话先占", ctxStatTip:"每次开始对话，Claude Code 都会先放进所有 skill 的名字和描述，让 Claude 知道能用哪些。这个数按最近一次清单估算。", wiltStat:"盆在枯萎", wiltShort:"在枯萎",
+    ctxH:"体检", ctxSub:"上下文占用", deadH:"很少用却一直占着位置", trigH:"触发情况",
+    ctxP:(tok, n) => `每次对话开始时，Claude Code 会把一份 skill 清单放进模型的上下文。最近一次的清单有 ${n} 个 skill，约 ${tok} tokens。这是估算：中文字符每个算 1 token，其他字符每 4 个算 1 token，和真实计数会有出入。`,
+    truncP:n => `其中 ${n} 个 skill 的描述在清单里被截断了。`,
+    deadP:(n, tok, pct) => `从没用过、只用过一次或正在枯萎的有 ${n} 个，一共约 ${tok} tokens，占清单的 ${pct}%。下面是占得最多的几个。`,
+    deadNone:"清单里的 skill 都有在用，没有闲置的。",
+    tokN:n => `${n} tokens`, idle:d => `${d} 天没用`,
+    trigP:"根据对话记录推测，只是线索，不是结论。点名字看例子。",
+    trigNone:"没发现可疑的漏触发或误触发。",
+    missedLab:"可能漏触发", misLab:"可能误触发",
+    kvx:{ctx:"上下文", trend:"近 8 周", co:"常一起用", wilt:"枯萎"},
+    ctxCur:"每次对话都会载入", ctxOld:"不在最近一次清单里", ctxNone:"没在 Claude Code 的 skill 清单里出现过", trunc:"描述被截断了",
+    trendSum:n => `共 ${n} 次 · 左边是 8 周前，右边是本周`, trendNone:"这 8 周没有用过", coN:n => ` ${n} 次`,
+    wiltLine:(d, n) => `已经 ${d} 天没用了。用过的 skill 超过 ${n} 天没用就算枯萎，天数在 farm.json 的 growth.wilt 里改`,
+    missedH:n => `可能漏触发 ${n} 次`, misH:n => `可能误触发 ${n} 次`,
+    missedP:"这些对话里你说的话很像它的触发词，它也在可用清单里，但整场对话都没有调用它。只是可能，未必真该用。",
+    misP:"调用它之后，你的下一句话读起来像在纠正。只是可能，纠正的也许是别的事。",
   },
   en: {
     title:"Skill Farm", sub:"Every Claude skill on this computer is planted here. The more you use one, the more it grows.",
     poke:"Poke the greenhouse", houseAria:"The farm greenhouse",
-    themeAria:"Switch colors", toPeach:"Peach", toBlue:"Baby blue", langBtn:"中文", langAria:"切换到中文",
-    search:"Search names or descriptions…", searchAria:"Search skills", viewAria:"View", cards:"Cards", farm:"Farm",
+    themeAria:"Switch colors", themes:{peach:"Peach", blue:"Baby blue", night:"Night"}, langBtn:"中文", langAria:"切换到中文",
+    search:"Search names or descriptions…", searchAria:"Search skills", viewAria:"View", cards:"Cards", farm:"Farm", mini:"Minimal",
     projAria:"Filter by project", sortAria:"Sort", allProjects:"All projects",
     sort:{uses:"Most used", recent:"Recently used", name:"Name", modified:"Recently edited"},
     recentH:"Recent activity", warnH:"Needs attention", ghostH:"Used before, missing now",
@@ -340,6 +431,13 @@ const I18N = {
     warnShort:(w, other) => w.code === "similar" && other ? `Similar to ${other}` : w.code === "dup" ? "Shares a name with another skill" : I18N.en.problem[w.problem],
     more:n => ` and ${n} more`, showMore:n => `Show ${n} more`, showLess:"Show less", ghostUses:n => n === 1 ? "1 use" : `${n} uses`,
     tagsLabel:"Tags", all:"All", untagged:"Untagged",
+    delBtn:"Delete this skill", delPluginBtn:"Uninstall its plugin", copyCmd:"Copy command",
+    delTrash:n => `Run this line in a terminal to move the ${n} folder to the Trash. To undo, drag it back from the Trash. Rebuild the page afterwards.`,
+    delRm:n => `Running this line permanently deletes the ${n} folder and can't be undone, so double-check first. Rebuild the page afterwards.`,
+    delLinked:p => `It's a link, so this only moves the link. The original folder ${p} stays as it is.`,
+    delProject:"This skill lives in a project folder. If the project uses git, commit the deletion.",
+    delPlugin:(p, n) => `A single skill inside a plugin can't be deleted on its own. Running this command in Claude Code uninstalls the whole ${p} plugin and removes all ${n} of its skills.`,
+    delBuiltin:"This skill ships with Claude, so it can't be deleted.",
     fixTitle:"How to fix", ignore:"Ignore", restore:"Restore",
     fix:(w, c) => {
       const f = [];
@@ -361,6 +459,23 @@ const I18N = {
       return f;
     },
     foot:g => `Generated ${g} · Run build.py again to refresh`,
+    ctxStat:"tokens used up front each chat", ctxStatTip:"Every chat starts with the names and descriptions of all your skills, so Claude knows what it can use. Estimated from the latest list.", wiltStat:"wilting", wiltShort:"wilting",
+    ctxH:"Check-up", ctxSub:"Context cost", deadH:"Rarely used, always loaded", trigH:"Triggers",
+    ctxP:(tok, n) => `At the start of every chat, Claude Code puts a skill list into the model's context. The latest list has ${n} skills, about ${tok} tokens. This is an estimate: one token per Chinese character and one per four other characters, so real counts will differ.`,
+    truncP:n => n === 1 ? "One skill's description was cut short in the list." : `${n} skills had their descriptions cut short in the list.`,
+    deadP:(n, tok, pct) => `${n} skills were never used, used once, or are wilting. Together they take about ${tok} tokens, ${pct}% of the list. These take the most.`,
+    deadNone:"Every skill in the list is in use. Nothing idle.",
+    tokN:n => `${n} tokens`, idle:d => `idle ${d} days`,
+    trigP:"Guessed from your chat history. Treat these as leads, not verdicts. Open a skill to see examples.",
+    trigNone:"No likely missed or wrong triggers found.",
+    missedLab:"Possibly missed", misLab:"Possibly misfired",
+    kvx:{ctx:"Context", trend:"Last 8 weeks", co:"Used with", wilt:"Wilting"},
+    ctxCur:"loaded in every chat", ctxOld:"not in the latest list", ctxNone:"Never appeared in Claude Code's skill list", trunc:"description cut short",
+    trendSum:n => `${n === 1 ? "1 call" : `${n} calls`} · 8 weeks ago on the left, this week on the right`, trendNone:"Not used in these 8 weeks", coN:n => ` ${n}×`,
+    wiltLine:(d, n) => `Not used for ${d} days. A used skill counts as wilting after ${n} idle days. Change the number with growth.wilt in farm.json.`,
+    missedH:n => n === 1 ? "Possibly missed once" : `Possibly missed ${n} times`, misH:n => n === 1 ? "Possibly misfired once" : `Possibly misfired ${n} times`,
+    missedP:"In these chats something you said closely matched its trigger words and it was available, but it was never called in that chat. Only a hint, not a verdict.",
+    misP:"Right after it was called, your next message read like a correction. Only a hint, the correction may have been about something else.",
   },
 };
 const QS = new URLSearchParams(location.search);
@@ -369,9 +484,17 @@ try { lang = localStorage.getItem("sb-lang") || (navigator.language.startsWith("
 if (I18N[QS.get("lang")]) lang = QS.get("lang");
 let t = I18N[lang];
 const pick = k => k.split(".").reduce((o, x) => o && o[x], t);
+const GROUP_ORDER = ["user", "project", "plugin", "anthropic", "builtin", "codex"];
 const SOURCES = ["user", "project", "plugin", "anthropic", "builtin", "codex"];
 const desc = s => (lang === "en" && s.description_en) || s.description;
 const tg = x => lang === "en" && DATA.tag_en && DATA.tag_en[x] || x;
+const blurb = s => {
+  const b = lang === "zh" ? (s.blurb_zh || s.blurb_en) : (s.blurb_en || s.blurb_zh);
+  if (b) return b;
+  const d = desc(s) || "", first = d.split(/(?<=[.。!?！？])\s*/)[0];
+  return first.length > 70 ? first.slice(0, 68) + "…" : first;
+};
+const dn = s => (lang === "zh" && s.name_zh) || s.name;
 const pname = s => lang === "en" ? s.plant.name_en || s.plant.name : s.plant.name;
 const HOUSE_SRC = ["user", "project", "plugin", "anthropic", "builtin"];
 const VAR = {user:"u", project:"p", plugin:"g", anthropic:"a", builtin:"b", codex:"c"};
@@ -392,6 +515,18 @@ const tier = n => n === 0 ? 0 : n <= 2 ? 1 : n <= 8 ? 2 : 3;
 
 const G = () => DATA.growth || {mid: 1, mature: 5};
 const stageOf = n => n >= G().mature ? 2 : n >= G().mid ? 1 : 0;
+const WILT = () => G().wilt ?? 30;
+const idleDays = s => s.last_used ? Math.floor((Date.now() - new Date(s.last_used)) / 864e5) : 0;
+const wilting = s => s.uses > 0 && !!s.last_used && idleDays(s) > WILT();
+const fmt = n => Number(n).toLocaleString(lang === "zh" ? "zh-CN" : "en-US");
+const skillByInvoke = k => DATA.skills.find(s => s.invoke === k) || DATA.skills.find(s => s.name === k.split(":").pop());
+function spark(w){
+  const W = 128, H = 30, max = Math.max(1, ...w), x = i => 4 + i * (W - 8) / (w.length - 1), y = v => H - 4 - v / max * (H - 8);
+  const pts = w.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  return `<svg class="spark" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" aria-hidden="true"><path d="M4 ${H - 4}H${W - 4}" stroke="var(--line)" stroke-width="1.5"/>` +
+    `<polyline points="${pts}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>` +
+    w.map((v, i) => v ? `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i === w.length - 1 ? 3 : 2}" fill="var(--accent)"/>` : "").join("") + `</svg>`;
+}
 function pot(s){
   if (!s.plant) return plant(s.uses);
   const st = stageOf(s.uses), src = [s.plant.seed, s.plant.mid, s.plant.src][st];
@@ -484,7 +619,7 @@ function warnNote(s){
   const W = live().filter(w => w.skills.includes(s.id));
   if (!W.length) return null;
   const w = W[0], other = w.skills.filter(id => id !== s.id).map(byId).filter(Boolean)[0];
-  const short = t.warnShort(w, other && other.name);
+  const short = t.warnShort(w, other && dn(other));
   return {short: W.length > 1 ? short + t.more(W.length - 1) : short, text: W.map(t.warn).join("\n")};
 }
 
@@ -492,14 +627,20 @@ function stats(){
   const S = DATA.skills, used = S.filter(s => s.uses).length;
   const fav = [...S].sort((a,b) => b.uses - a.uses)[0];
   const n = live().length;
-  $("#stats").innerHTML = [
+  const wl = S.filter(wilting).length, k = x => x >= 1000 ? (x / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(x);
+  const main = [
     `<span><b>${S.length}</b>${t.stats[0]}</span>`,
-    `<span><b>${DATA.total_calls}</b>${t.stats[1]}</span>`,
     `<span><b>${used}</b>${t.stats[2]}</span>`,
-    `<span><b>${S.length - used}</b>${t.stats[3]}</span>`,
-    fav && fav.uses ? `<span class="fav">${t.stats[4]} <b>${esc(fav.name)}</b></span>` : "",
+    `<span><b>${DATA.total_calls}</b>${t.stats[1]}</span>`,
+    DATA.context && DATA.context.tok ? `<button type="button" class="go" id="toCtx" title="${esc(t.ctxStatTip)}"><b>~${k(DATA.context.tok)}</b><span>${t.ctxStat}</span></button>` : "",
+  ];
+  const side = [
+    wl ? `<button type="button" class="go wilt" id="toWilt"><b>${wl}</b><span>${t.wiltStat}</span></button>` : "",
     n ? `<button type="button" class="warn" id="toWarn"><b>${n}</b><span>${t.stats[5]}</span></button>` : "",
-  ].join("");
+  ].filter(Boolean);
+  $("#stats").innerHTML = `<div class="sm">${main.join("")}</div>` + (side.length ? `<div class="ss">${side.join("")}</div>` : "");
+  const tl = $("#toWilt"); if (tl) tl.onclick = () => $("#ctxSec").scrollIntoView({behavior:"smooth"});
+  const tc = $("#toCtx"); if (tc) tc.onclick = () => $("#ctxSec").scrollIntoView({behavior:"smooth"});
   const tw = $("#toWarn"); if (tw){ const go = () => $("#warnSec").scrollIntoView({behavior:"smooth"}); tw.onclick = go; tw.onkeydown = e => { if (e.key === "Enter") go(); }; }
 }
 
@@ -517,35 +658,96 @@ function chips(){
 function grid(){
   const q = $("#q").value.trim().toLowerCase(), sort = $("#sort").value;
   const pj = $("#proj").value;
-  let L = DATA.skills.filter(s => on.has(s.source) && (!pj || s.used_in.includes(pj)) && (!tag || (tag === NOTAG ? !s.tags.length : s.tags.includes(tag))) && (!q || (s.invoke + " " + s.description + " " + (s.description_en || "")).toLowerCase().includes(q)));
-  const cmp = {uses:(a,b) => b.uses - a.uses || a.name.localeCompare(b.name),
+  let L = DATA.skills.filter(s => on.has(s.source) && (!pj || s.used_in.includes(pj)) && (!tag || (tag === NOTAG ? !s.tags.length : s.tags.includes(tag))) && (!q || (s.invoke + " " + (s.name_zh || "") + " " + s.description + " " + (s.description_en || "")).toLowerCase().includes(q)));
+  const cmp = {uses:(a,b) => b.uses - a.uses || dn(a).localeCompare(dn(b)),
     recent:(a,b) => (b.last_used||"").localeCompare(a.last_used||""),
-    name:(a,b) => a.name.localeCompare(b.name), modified:(a,b) => (b.modified||"").localeCompare(a.modified||"")}[sort];
+    name:(a,b) => dn(a).localeCompare(dn(b), lang === "zh" ? "zh-CN" : "en"), modified:(a,b) => (b.modified||"").localeCompare(a.modified||"")}[sort];
   L.sort(cmp);
-  $("#grid").className = view === "farm" ? "farm" : "grid";
-  if (view === "farm" && L.length){
-    $("#grid").innerHTML = L.map((s, i) => `<button type="button" class="plot ${s.uses ? "" : "sleep"}" data-id="${esc(s.id)}" style="--src:var(--${VAR[s.source]});animation-delay:${Math.min(i, 20) * 20}ms" title="${esc(s.invoke)}">
-      ${pot(s)}${warnNote(s) ? `<span class="alert" title="${esc(warnNote(s).text)}">${BANG}</span>` : ""}<b>${esc(s.name)}</b><small><i></i>${s.uses ? t.farmUses(s.uses) : t.asleep}</small></button>`).join("");
-    document.querySelectorAll(".plot").forEach(c => c.onclick = () => open(c.dataset.id));
-    return;
-  }
-  $("#grid").innerHTML = L.length ? L.map((s, i) => {
+  $("#grid").className = "groups";
+  if (!L.length){ $("#grid").innerHTML = `<div class="empty">${t.empty}</div>`; return; }
+  let i = 0;
+  const plot = s => `<button type="button" class="plot ${s.uses ? "" : "sleep"} ${wilting(s) ? "wilt" : ""}" data-id="${esc(s.id)}" style="--src:var(--${VAR[s.source]});animation-delay:${Math.min(i++, 20) * 20}ms" title="${esc(s.invoke)}">
+      ${pot(s)}${warnNote(s) ? `<span class="alert" title="${esc(warnNote(s).text)}">${BANG}</span>` : ""}<b>${esc(dn(s))}</b><small>${s.uses ? t.farmUses(s.uses) + (wilting(s) ? " · " + t.wiltShort : "") : t.asleep}</small></button>`;
+  const card = s => {
     const w = warnNote(s);
-    return `<button type="button" class="card s-${s.source} ${s.uses ? "" : "sleep"}" data-id="${esc(s.id)}" style="animation-delay:${Math.min(i, 14) * 30}ms">
-      <div class="pot">${pot(s)}${w ? `<span class="alert" title="${esc(w.text)}" aria-label="${esc(w.short)}">${BANG}</span>` : ""}</div>
-      <div class="src"><i></i><span>${[t.src[s.source], ...s.tags.map(tg)].map(esc).join(" · ")}</span></div>
-      <h3>${esc(s.name)}</h3>
-      <p>${esc(desc(s) || t.noDesc)}</p>
-      ${s.update ? `<div class="note up" title="${esc(t.updDetail(s.update))}">${UP}${esc(t.updShort(s.update))}</div>` : ""}
-      <div class="use">${s.uses ? `<b>${t.used(s.uses)}</b><span class="when">${ago(s.last_used)}</span>` : `<span class="sleepy">${t.never}</span>`}</div>
+    return `<button type="button" class="card s-${s.source} ${s.uses ? "" : "sleep"} ${wilting(s) ? "wilt" : ""}" data-id="${esc(s.id)}" style="animation-delay:${Math.min(i++, 14) * 30}ms">
+      <div class="head"><div class="ttl"><h3 title="${esc(s.invoke)}">${esc(s.name)}</h3>${dn(s) !== s.name ? `<div class="orig">${esc(dn(s))}</div>` : ""}<p>${esc(blurb(s) || t.noDesc)}</p>${s.update ? `<div class="note up" title="${esc(t.updDetail(s.update))}">${UP}${esc(t.updShort(s.update))}</div>` : ""}</div><div class="pot">${pot(s)}${w ? `<span class="alert" title="${esc(w.text)}" aria-label="${esc(w.short)}">${BANG}</span>` : ""}</div></div>
+      <div class="use">${s.uses ? `<b>${t.used(s.uses)}</b>` : `<span class="sleepy">${t.never}</span>`}${s.uses ? `<span class="when"${wilting(s) ? ` title="${esc(t.wiltShort)}"` : ""}>${ago(s.last_used)}</span>` : ""}</div>
     </button>`;
-  }).join("") : `<div class="empty">${t.empty}</div>`;
+  };
+  $("#grid").innerHTML = GROUP_ORDER.map(k => {
+    const G = L.filter(s => s.source === k);
+    if (!G.length) return "";
+    return `<section class="grp" style="--src:var(--${VAR[k]})"><h2 class="gh"><i></i>${esc(t.src[k])}<span>${G.length}</span></h2>
+      <div class="${view === "farm" ? "farm" : "grid"}">${G.map(view === "farm" ? plot : card).join("")}</div></section>`;
+  }).join("");
+  document.querySelectorAll(".plot").forEach(c => c.onclick = () => open(c.dataset.id));
   document.querySelectorAll(".card").forEach(c => c.onclick = () => open(c.dataset.id));
+  fitTitles();
+}
+function fitTitles(){
+  // long names shrink a step at a time to stay on one line, down to 15px
+  document.querySelectorAll(".card h3").forEach(h => {
+    h.style.fontSize = "";
+    let px = parseFloat(getComputedStyle(h).fontSize);
+    while (h.scrollWidth > h.clientWidth && px > 15){ px -= 1; h.style.fontSize = px + "px"; }
+  });
 }
 
+function diagRows(s){
+  const c = s.ctx, w = s.weeks || [], tot = w.reduce((a, b) => a + b, 0);
+  const ctx = c ? `<span class="num">~${fmt(c.tok)}</span> tokens · ${c.cur ? t.ctxCur : t.ctxOld}${c.trunc ? " · " + t.trunc : ""}` : esc(t.ctxNone);
+  const co = (s.co || []).map(([k, n]) => { const x = skillByInvoke(k);
+    return (x ? `<button type="button" class="lnk" data-go="${esc(k)}">${esc(dn(x))}</button>` : esc(k)) + `<span class="hint">${t.coN(n)}</span>`; }).join(`<span class="hint"> · </span>`);
+  return `<dt>${t.kvx.ctx}</dt><dd>${ctx}</dd>` +
+    (wilting(s) ? `<dt>${t.kvx.wilt}</dt><dd>${esc(t.wiltLine(idleDays(s), WILT()))}</dd>` : "") +
+    (w.length ? `<dt>${t.kvx.trend}</dt><dd>${tot ? spark(w) + `<span class="hint">${esc(t.trendSum(tot))}</span>` : `<span class="hint">${t.trendNone}</span>`}</dd>` : "") +
+    (co ? `<dt>${t.kvx.co}</dt><dd>${co}</dd>` : "");
+}
+function quotes(m, head, note, style){
+  if (!m || !m.n) return "";
+  return `<div class="qs" style="${style}"><h4><i></i>${esc(head(m.n))}</h4><p>${esc(note)}</p><ul>` +
+    m.ex.map(e => `<li><small>${esc(e.ts ? t.day(new Date(e.ts)) : "")}${e.project ? " · " + esc(e.project) : ""}</small>${esc(e.q)}</li>`).join("") + `</ul></div>`;
+}
+function checkup(){
+  const C = DATA.context, S = DATA.skills;
+  $("#ctxSec").hidden = !(C && C.tok);
+  if (!C || !C.tok) return;
+  const idle = s => s.uses <= 1 || wilting(s);
+  const D = S.filter(s => s.ctx && s.ctx.cur && idle(s)).sort((a, b) => b.ctx.tok - a.ctx.tok);
+  const dtok = D.reduce((a, s) => a + s.ctx.tok, 0);
+  const why = s => !s.uses ? t.never : wilting(s) ? t.idle(idleDays(s)) : t.used(s.uses);
+  const row = (s, right) => `<li style="--src:var(--${VAR[s.source]})"><i></i><button type="button" class="lnk" data-id="${esc(s.id)}">${esc(dn(s))}</button>${right}</li>`;
+  const M = S.filter(s => s.missed && s.missed.n).sort((a, b) => b.missed.n - a.missed.n);
+  const X = S.filter(s => s.mis && s.mis.n).sort((a, b) => b.mis.n - a.mis.n);
+  const inl = (lab, L, f) => L.length ? `<div class="inl"><span class="lab">${lab}</span>` + L.map(s => `<button type="button" class="lnk" data-id="${esc(s.id)}">${esc(dn(s))}</button><span class="hint">&nbsp;${f(s)}</span>`).join(`<span class="sep"> · </span>`) + `</div>` : "";
+  $("#ctx").innerHTML = `<h3>${t.ctxSub}</h3><p>${esc(t.ctxP(fmt(C.tok), C.n))}${C.trunc ? " " + esc(t.truncP(C.trunc)) : ""}</p>
+    <h3>${t.deadH}</h3>` + (D.length ? `<p>${esc(t.deadP(D.length, fmt(dtok), Math.round(dtok / C.tok * 100)))}</p><ul class="rows">` +
+      D.slice(0, 8).map(s => row(s, `<span class="n">${fmt(s.ctx.tok)}</span><span class="why">tokens · ${esc(why(s))}</span>`)).join("") + `</ul>` : `<p>${t.deadNone}</p>`) +
+    `<h3>${t.trigH}</h3><p>${M.length || X.length ? t.trigP : t.trigNone}</p>` +
+    inl(t.missedLab, M, s => s.missed.n) + inl(t.misLab, X, s => s.mis.n);
+  $("#ctx").querySelectorAll("[data-id]").forEach(b => b.onclick = () => open(b.dataset.id));
+}
+
+function delBlock(s){
+  const q = x => `"${String(x).replace(/(["\\$`])/g, "\\$1")}"`;
+  let btn = t.delBtn, body = "";
+  if (["user", "project", "codex"].includes(s.source) && s.dir){
+    const mac = DATA.platform === "darwin";
+    const cmd = mac ? `mv ${q(s.dir)} ~/.Trash/${q(s.name + "-" + Date.now())}` : `rm -rf ${q(s.dir)}`;
+    body = `<p>${esc(mac ? t.delTrash(s.name) : t.delRm(s.name))}</p>${s.linked ? `<p>${esc(t.delLinked(s.linked))}</p>` : ""}${s.source === "project" ? `<p>${esc(t.delProject)}</p>` : ""}<pre class="cmd" id="delCmd">${esc(cmd)}</pre>`;
+  } else if (s.source === "plugin" && s.scope && s.scope.plugin){
+    btn = t.delPluginBtn;
+    const n = DATA.skills.filter(x => x.source === "plugin" && x.scope && x.scope.plugin === s.scope.plugin).length;
+    body = `<p>${esc(t.delPlugin(s.scope.plugin, n))}</p><pre class="cmd" id="delCmd">${esc(`/plugin uninstall ${s.scope.plugin}${s.scope.mkt ? "@" + s.scope.mkt : ""}`)}</pre>`;
+  } else if (["anthropic", "builtin"].includes(s.source)){
+    return `<p class="del hint">${esc(t.delBuiltin)}</p>`;
+  } else return "";
+  return `<div class="del"><button type="button" class="copy" id="delBtn">${btn}</button><div class="delbox" id="delBox" hidden>${body}<button type="button" class="copy" id="delCp">${t.copyCmd}</button></div></div>`;
+}
 function open(id){
   const s = DATA.skills.find(x => x.id === id);
-  $("#dTitle").textContent = s.invoke;
+  $("#dTitle").textContent = dn(s) !== s.name ? dn(s) : s.invoke;
   $("#dPlant").innerHTML = pot(s);
   $("#dTags").innerHTML = `<div class="src" style="--src:var(--${VAR[s.source]})"><i></i><span>${t.src[s.source]} · ${s.uses ? t.used(s.uses) : t.never}</span></div>`;
   const W = DATA.warnings.filter(w => w.skills.includes(id));
@@ -564,8 +766,15 @@ function open(id){
       ${s.used_in.length ? `<dt>${t.kv.usedIn}</dt><dd>${s.used_in.map(esc).join(" · ")}</dd>` : ""}
       <dt>${t.kv.last}</dt><dd>${s.last_used ? esc(s.last_used.slice(0,16).replace("T"," ")) + ` <span class="hint">· ${ago(s.last_used)}</span>` : "—"}</dd>
       ${s.lines ? `<dt>${t.kv.size}</dt><dd>${t.size(s.lines, s.files)}</dd>` : ""}
+      ${diagRows(s)}
     </dl>
+    ${quotes(s.missed, t.missedH, t.missedP, "--q:var(--p)")}${quotes(s.mis, t.misH, t.misP, "--q:var(--a)")}
+    ${delBlock(s)}
     <pre>${esc(s.bundled ? t.bundled : s.body)}</pre>`;
+  $("#dlg .dh").classList.toggle("wilt", wilting(s));
+  $("#dBody").querySelectorAll("[data-go]").forEach(b => b.onclick = () => { const x = skillByInvoke(b.dataset.go); if (x) open(x.id); });
+  if ($("#delBtn")) $("#delBtn").onclick = () => { $("#delBox").hidden = !$("#delBox").hidden; };
+  if ($("#delCp")) $("#delCp").onclick = () => { navigator.clipboard && navigator.clipboard.writeText($("#delCmd").textContent); $("#delCp").textContent = t.copied; };
   if ($("#cp")) $("#cp").onclick = () => { navigator.clipboard && navigator.clipboard.writeText(s.path); $("#cp").textContent = t.copied; };
   wireIgnore($("#dBody"), () => open(id));
   if (!$("#dlg").open) $("#dlg").showModal();
@@ -584,7 +793,7 @@ function recent(){
   (showAll ? R : R.slice(0, 12)).forEach(e => {
     const d = dayOf(e.ts), s = find(e.invoke), tm = new Date(e.ts);
     if (d !== last){ html += `<li class="day">${d}</li>`; last = d; }
-    const nm = s ? `<button type="button" class="nm" data-id="${esc(s.id)}">${esc(s.name)}</button>` : `<span class="nm">${esc(e.invoke)}</span>`;
+    const nm = s ? `<button type="button" class="nm" data-id="${esc(s.id)}">${esc(dn(s))}</button>` : `<span class="nm">${esc(e.invoke)}</span>`;
     html += `<li class="ev" style="--src:var(--${s ? VAR[s.source] : "line"})"><span class="t">${String(tm.getHours()).padStart(2,"0")}:${String(tm.getMinutes()).padStart(2,"0")}</span>${nm}<span class="pj">${esc(e.project)}</span></li>`;
   });
   $("#recent").innerHTML = html;
@@ -607,14 +816,17 @@ function extras(){
 const root = document.documentElement;
 const SUN = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>`;
 const MOON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>`;
-const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-function themeLabel(){ $("#theme").innerHTML = isDark() ? `${SUN}${t.toPeach}` : `${MOON}${t.toBlue}`; }
+const THEMES = ["peach", "blue", "night"];
+const curTheme = () => root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "night" : "peach");
+function themeLabel(){ const c = curTheme(); $("#theme").innerHTML = `${c === "night" ? MOON : SUN}${t.themes[c]}`; }
 $("#theme").onclick = () => {
-  root.dataset.theme = isDark() ? "light" : "dark"; themeLabel();
+  root.dataset.theme = THEMES[(THEMES.indexOf(curTheme()) + 1) % THEMES.length]; themeLabel();
   try { localStorage.setItem("sb-theme", root.dataset.theme); } catch(e){}
 };
-try { const t = localStorage.getItem("sb-theme"); if (t) root.dataset.theme = t; } catch(e){}
-if (QS.get("theme")) root.dataset.theme = QS.get("theme") === "blue" ? "dark" : "light";
+const OLD_THEME = {light: "peach", dark: "blue"};
+try { const t = localStorage.getItem("sb-theme"); if (t) root.dataset.theme = OLD_THEME[t] || t; } catch(e){}
+if (QS.get("theme")) root.dataset.theme = {dark: "night", ...OLD_THEME}[QS.get("theme")] || QS.get("theme");
+if (!THEMES.includes(root.dataset.theme)) delete root.dataset.theme;
 
 function statics(){
   root.lang = lang === "zh" ? "zh-CN" : "en";
@@ -636,11 +848,13 @@ let view = "cards";
 try { view = localStorage.getItem("sb-view") || "cards"; } catch(e){}
 if (QS.get("view")) view = QS.get("view");
 function viewsw(){
+  if (!["cards", "farm", "mini"].includes(view)) view = "cards";
+  root.dataset.view = view;
   document.querySelectorAll(".viewsw button").forEach(b => { b.classList.toggle("on", b.dataset.v === view); b.setAttribute("aria-pressed", b.dataset.v === view);
     b.onclick = () => { view = b.dataset.v; try { localStorage.setItem("sb-view", view); } catch(e){} viewsw(); grid(); }; });
 }
 let tag = "";
-const NOTAG = "\u0000none";
+const NOTAG = "__untagged__";
 function tagbar(){
   const n = {};
   DATA.skills.forEach(s => s.tags.forEach(x => n[x] = (n[x] || 0) + 1));
@@ -658,11 +872,12 @@ function projects(){
   $("#proj").innerHTML = `<option value="">${t.allProjects}</option>` + Object.keys(n).sort((a,b) => n[b] - n[a]).map(p => `<option value="${esc(p)}">${esc(p)} · ${n[p]}</option>`).join("");
   $("#proj").value = cur;
 }
-function render(){ statics(); house(); stats(); chips(); tagbar(); projects(); grid(); recent(); extras(); }
+function render(){ statics(); house(); stats(); chips(); tagbar(); projects(); grid(); recent(); extras(); checkup(); }
 $("#q").oninput = grid; $("#sort").onchange = grid; $("#proj").onchange = grid;
 render();
 $("#hbtn").onclick = poke;
-addEventListener("resize", () => { const img = $("#house"); if (img.complete && img.naturalWidth) trim(img); });
+if (document.fonts) document.fonts.ready.then(fitTitles);
+addEventListener("resize", () => { fitTitles(); const img = $("#house"); if (img.complete && img.naturalWidth) trim(img); });
 </script>
 </body>
 </html>
